@@ -12,14 +12,14 @@ body{
 
 a {
     text-decoration: none;
-    color: rgb(8, 34, 75);
+    color: whitesmoke;
     width: bold;
     margin-right: auto;
     transition: 1s;
     
 }
 a:hover {
-    color: whitesmoke;
+    color: rgb(8, 34, 75);
     
 }
 
@@ -41,11 +41,10 @@ h1, h3{
 header {
     display: flex;
     justify-content: space-between;
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: rgb(232, 176, 92);
     align-items: center;
     border-radius: 15px;  
-
 }
 
 header img {
@@ -78,6 +77,7 @@ main{
    align-items: center;
    box-shadow: 5px 5px 20px gray;
    padding-bottom: 10px;
+   
 }
 .card img {
     width: 100%;
@@ -96,6 +96,10 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 20px;
+}
+
+.card-text {
+    padding: 10px;
 }
 
 .sidebar {
@@ -136,6 +140,52 @@ main{
     color: rgb(8, 34, 75);
 }
 
+.contacto { 
+    justify-content: center;
+    align-items: center;    
+    background-color: aliceblue;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    align-items: center;
+    
+    
+}
+.form-label {
+    display: inline-block;
+    padding: auto;
+    align-items: center;
+    margin-bottom: 20px;
+     
+}
+input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(232, 176, 92);
+}
+
+.form-label textarea, #mensaje {
+    width: 65%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(232, 176, 92);
+}
+
+.boton {
+    background-color: rgb(232, 176, 92);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
 footer {
     background-color: rgb(232, 176, 92);
     display: flex;
@@ -143,6 +193,7 @@ footer {
     align-items: center;
     color: white;
     border-radius: 15%;
+    
 }
 
 

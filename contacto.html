@@ -11,7 +11,16 @@
 <body>
     <div class="page-container">
         <header>
-            <a href="./index.html"><img src="./media/el futuro no espera - logo.jpg" alt="libro"></a>
+            <a href="./index.html"><img src="./media/el futuro no espera - logo.jpg" alt="libro" id="logo">
+            </a>
+            <style>
+                #logo {
+                    cursor: pointer;
+                }
+                .colored {
+                    filter: invert(50%) sepia(50%) saturate(5000%) hue-rotate(90deg) brightness(90%) contrast(100%);
+                }
+            </style>
             <nav>
                <a href="./publicaciones.html">Publicaciones</a> 
                <a href="./conferencias.html">Conferencias</a>
@@ -21,15 +30,45 @@
 
         <div class slogan> 
             <h1>Henoch Aguiar</h1>
-            <h3>Políticas Digitales <br> y Telecomunicaciones</h3>
+            <h3>Políticas Digitales y Telecomunicaciones</h3>
         </div>
+       
+            <div class="contacto">
+                <h2>Contacto</h2>
+                <p>Si deseas ponerte en contacto conmigo, por favor llena el siguiente formulario:</p><br>            
+                <div class="form-container">
+                <form  action="mailto:henochaguiar@yahoo.com" method="post" target="_blank">
+                <label for="nombre" class="form-label">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>                
+               <br>
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <div>
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                </form>
+                <br>
+                <input type="submit" value="Enviar" class="boton">
+            </form>
+            </div>
+        </div>
+       
 
         <footer>
             <p>&copy; 2024 Henoch Aguiar. Todos los derechos reservados.</p>
         </footer>
 
     </div>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.getElementById('logo');
+        
+            logo.addEventListener('click', function() {
+                logo.classList.toggle('colored');
+            });
+        });
     <script src="scrip.js"></script>
 </body>
 </html>
