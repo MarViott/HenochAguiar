@@ -23,7 +23,6 @@ a:hover {
     
 }
 
-
 .page-container{
   display: grid;  
   grid-template-rows: 60px 100px 1fr 50px;
@@ -102,6 +101,22 @@ main{
     padding: 10px;
 }
 
+.conf-container {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    border: 1px dotted black;
+    margin: 10px;
+}
+.conf-container iframe {
+    border: 1px dotted black;
+    margin: 10px 100px;
+    border-radius: 10px;
+    align-content: center;
+}
+
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -140,6 +155,10 @@ main{
     color: rgb(8, 34, 75);
 }
 
+
+
+
+
 .contacto { 
     justify-content: center;
     align-items: center;    
@@ -154,6 +173,7 @@ main{
     flex-direction: column;
     width: 1200px;
     align-items: center;
+    text-align: left;
     
     
 }
