@@ -103,17 +103,28 @@ main{
 
 .conf-container {
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 2fr 2fr;
     grid-template-rows: auto;
     gap: 20px;
-    border: 1px dotted black;
+    /*border: 1px dotted black;*/
     margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    
+
 }
 .conf-container iframe {
-    border: 1px dotted black;
-    margin: 10px 100px;
+    display: grid;
+    /*border: 1px dotted black;*/
+    grid-template-columns: 2fr 2fr;
     border-radius: 10px;
     align-content: center;
+    box-shadow: 5px 5px 20px gray;
+    width: 90%;
+    justify-content: center
+
+    ;
 }
 
 
