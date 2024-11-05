@@ -33,34 +33,39 @@ a:hover {
 
 h1, h3{
     text-align: center;
-    padding: 5px 10px;
-        
+    padding: 5px 10px;   
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
     background-color: rgb(232, 176, 92);
     align-items: center;
-    border-radius: 15px;  
+    border-radius: 15px;
+      
 }
 
 header img {
     width: 60px;
     height: 100%;
     border-radius: 50%;
+    transition: transform 1s;
 }
+  
+  header img:hover {
+    transform: scale(1.5); /* La imagen se agrandará a 1.5 veces su tamaño original */
+  }
+  
 
 nav {
     display: flex;
     justify-content: space-between;
     width: 30%;
     align-items: center;
-    font-size: 1.1em;
-    padding: auto;
-    
+    font-size: 24px;
+    padding: auto;    
 }
+
 
 main{
     display: grid;
@@ -76,6 +81,7 @@ main{
    align-items: center;
    box-shadow: 5px 5px 20px gray;
    padding-bottom: 10px;
+   margin: 10px;
    
 }
 .card img {
@@ -122,9 +128,7 @@ main{
     align-content: center;
     box-shadow: 5px 5px 20px gray;
     width: 90%;
-    justify-content: center
-
-    ;
+    justify-content: center;
 }
 
 
@@ -167,9 +171,6 @@ main{
 }
 
 
-
-
-
 .contacto { 
     justify-content: center;
     align-items: center;    
@@ -192,7 +193,7 @@ main{
     display: inline-block;
     padding: auto;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
      
 }
 input {
@@ -202,8 +203,7 @@ input {
     border: 1px solid rgb(232, 176, 92);
 }
 
-.form-label textarea, #mensaje {
-    width: 65%;
+.form textarea, #mensaje {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid rgb(232, 176, 92);

@@ -11,20 +11,12 @@
 <body>
     <div class="page-container">
         <header>
-            <a href="./index.html"><img src="./media/el futuro no espera - logo.jpg" alt="libro" id="logo">
-            </a>
-            <style>
-                #logo {
-                    cursor: pointer;
-                }
-                .colored {
-                    filter: invert(50%) sepia(50%) saturate(5000%) hue-rotate(90deg) brightness(90%) contrast(100%);
-                }
-            </style>
+            <a href="./index.html"><img src="./media/el futuro no espera - logo.jpg" alt="libro" class="logo"></a>
             <nav>
-               <a href="./publicaciones.html">Publicaciones</a> 
-               <a href="./conferencias.html">Conferencias</a>
-               <a href="./contacto.html">Contacto</a>
+                <a href="./publicaciones.html"><i class="fas fa-book"></i></a> 
+                <a href="./conferencias.html"><i class="fas fa-microphone"></i></a>
+                <a href="./clipping.html"><i class="fas fa-newspaper"></i></a>
+                <a href="./contacto.html"><i class="fas fa-envelope"></i></a>            
             </nav>
         </header>
 
@@ -61,14 +53,7 @@
         </footer>
 
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const logo = document.getElementById('logo');
-        
-            logo.addEventListener('click', function() {
-                logo.classList.toggle('colored');
-            });
-        });
+   
     <script src="scrip.js"></script>
 </body>
 </html>
