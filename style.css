@@ -109,7 +109,7 @@ main{
 
 .conf-container {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: auto;
     gap: 20px;
     /*border: 1px dotted black;*/
@@ -152,13 +152,19 @@ main{
     width: 80%;
     border-radius: 10%;
 }
+.sidebar p {
+    padding: 10px;
+    margin: 10px;
+}
+#libro {
+    width: 60%;
+}
 
 .social-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    
 }
 
 .social-links a {
