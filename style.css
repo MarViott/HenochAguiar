@@ -177,16 +177,13 @@ main{
 }
 
 .container-fluid a {
-    color: rgb(8, 34, 75);
+    color: rgb(222, 153, 51);
     width: bold;
 }
 
 .container-fluid a:hover {
-    color: rgb(232, 176, 92);
+    color: rgb(8, 34, 75);
 }
-
-
-
 
 .contacto { 
     justify-content: center;
