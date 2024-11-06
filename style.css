@@ -31,7 +31,7 @@ a:hover {
   padding: 20px;
 }
 
-h1, h3{
+h1, h3, h4 {
     text-align: center;
     padding: 5px 10px;   
 }
@@ -175,6 +175,17 @@ main{
 .social-links a:hover {
     color: rgb(8, 34, 75);
 }
+
+.container-fluid a {
+    color: rgb(8, 34, 75);
+    width: bold;
+}
+
+.container-fluid a:hover {
+    color: rgb(232, 176, 92);
+}
+
+
 
 
 .contacto { 
