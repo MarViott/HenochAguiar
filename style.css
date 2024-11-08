@@ -77,12 +77,13 @@ main{
    border-radius: 15px; 
    width: 90%;
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   flex-direction: column;   
    box-shadow: 5px 5px 20px gray;
-   padding-bottom: 10px;
+   padding: 5px;
    margin: 10px;
-   
+   transition: all 0.3s ease-in-out;
+   align-content: baseline;
+    
 }
 .card img {
     width: 100%;
@@ -130,7 +131,11 @@ main{
     width: 90%;
     justify-content: center;
 }
+.conf-container h3, p {
+    width: 90%;
+    text-align: center;
 
+}
 
 .sidebar {
     display: flex;
@@ -158,6 +163,8 @@ main{
 }
 #libro {
     width: 60%;
+    box-shadow: 5px 5px 20px gray;
+    border-radius: 1px;
 }
 
 .social-links {
@@ -221,6 +228,7 @@ input {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid rgb(232, 176, 92);
+    width: 400px;
 }
 
 .boton {
@@ -229,6 +237,13 @@ input {
     padding: 10px;
     border-radius: 10px;
     border: none;
+}
+.accordion img {
+    border-radius: 25px;
+    float: left;
+    margin-right: 20px; 
+    margin-bottom: 10px;
+    width: 30%;
 }
 
 footer {
