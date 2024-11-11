@@ -111,7 +111,7 @@ main{
 .conf-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: auto;
+    grid-template-rows: 2fr 2fr 2fr;
     gap: 20px;
     /*border: 1px dotted black;*/
     margin: 10px;
