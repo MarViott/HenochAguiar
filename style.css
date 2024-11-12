@@ -245,6 +245,62 @@ input {
     width: 30%;
 }
 
+.clipping-app {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted black;
+}
+#formularioNoticias {
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  #formularioNoticias input,
+  #formularioNoticias select {
+    border-radius: 8px;
+    border: solid 1px grey;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+  
+  #formularioNoticias button {
+    width: 50%;
+    background-color: rgb(53, 50, 50);
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+/*for noticias cards*/  
+  .noticias-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;    
+    background-color: rgb(232, 176, 92);
+    height: 50px;
+  }
+  
+  .item-category {
+    font-size: 12px;
+    align-self: flex-end;
+  }
+  
+
 footer {
     background-color: rgb(232, 176, 92);
     display: flex;
