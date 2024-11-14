@@ -248,6 +248,7 @@ input {
 .clipping-app {
     display: flex;
     flex-direction: column;
+         
     border: 1px dotted black;
 }
 #formularioNoticias {
@@ -286,8 +287,8 @@ input {
   
 /*for noticias cards*/  
   .noticias-container {
-    display: flex;
-    flex-direction: column;
+    display: flex;   
+    flex-direction: column;   
     align-items: center;
     justify-content: space-between;
     padding: 10px;    
