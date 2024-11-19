@@ -98,7 +98,7 @@
           }
           
            //event listener for form button
-  const submitBtn = document.getElementById('add-meal-form');
+  const submitBtn = document.getElementById('formularioNoticias');
   submitBtn.addEventListener('submit', addMeal);
   
   //event listener for hamburger icon
