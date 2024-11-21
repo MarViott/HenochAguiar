@@ -66,7 +66,6 @@ nav {
     padding: auto;    
 }
 
-
 main{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -237,6 +236,23 @@ input {
     border-radius: 10px;
     border: none;
 }
+
+.social-links-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+.social-links-contact a {
+    font-size: 1.5em;
+    color: white;    
+}
+.social-links-contact a:hover {
+    color: rgb(8, 34, 75);
+}
+
+
+
 .accordion img {
     border-radius: 25px;
     float: left;
