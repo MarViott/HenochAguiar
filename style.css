@@ -230,7 +230,7 @@ input {
     width: 400px;
 }
 
-.boton {
+.button {
     background-color: rgb(232, 176, 92);
     color: white;
     padding: 10px;
@@ -247,8 +247,7 @@ input {
 
 .clipping-app {
     display: flex;
-    flex-direction: column;
-         
+    flex-direction: column;         
     border: 1px dotted black;
 }
 #formularioNoticias {
@@ -275,7 +274,7 @@ input {
   }
   
   #formularioNoticias button {
-    width: 50%;
+    width: 100%;
     background-color: rgb(53, 50, 50);
     border: none;
     color: white;
@@ -321,3 +320,13 @@ footer {
     grid-template-columns: 1fr;
    }
 }
+
+@media (min-width: 321px) and (max-width: 768px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+       } 
+       .card-container{
+        grid-template-columns: 1fr 1fr;
+       }
+}
+
