@@ -117,8 +117,6 @@ main{
     padding: 20px;
     border-radius: 15px;
     background-color: aliceblue;
-    
-
 }
 .conf-container iframe {
     display: grid;
@@ -133,7 +131,6 @@ main{
 .conf-container h3, p {
     width: 90%;
     text-align: center;
-
 }
 
 .sidebar {
@@ -144,8 +141,6 @@ main{
     background-color:aliceblue;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-   
-
 }
 .sidebar h2 {
     color: rgb(232, 176, 92);
@@ -192,6 +187,9 @@ main{
 }
 
 .contacto { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     justify-content: center;
     align-items: center;    
     background-color: aliceblue;
@@ -203,7 +201,7 @@ main{
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    width: 50%;
     align-items: center;
     text-align: left;
     
@@ -250,8 +248,6 @@ input {
 .social-links-contact a:hover {
     color: rgb(8, 34, 75);
 }
-
-
 
 .accordion img {
     border-radius: 25px;
@@ -330,28 +326,67 @@ footer {
 
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
+    body{
+        flex-wrap: wrap;
+    }
     main{
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
        } 
     .card-container{
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto;
+        grid-template-columns: 2fr; 
     }      
-}
+    .conf-container {
+        grid-template-columns: 2fr;      
+    }
+    .conf-container iframe{
+        grid-template-columns: 2fr;       
+    }       
 
-@media (min-width: 321px) and (max-width: 768px) or (orientation: landscape) {
+    }
+    .social-links-contact {
+        grid-template-columns: 1fr;
+    }
+    .contacto { 
+        width: 90%;
+    }
+
+
+@media (min-width: 577px) and (max-width: 900px) or (orientation: landscape) {
+    body{
+        flex-wrap: wrap;
+    }
     main{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 1fr 1fr;
        } 
     .card-container{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-       }
+       }    
+
+    .conf-container {
+        grid-template-columns: 2fr 2fr; 
+        grid-template-rows: 2fr 2fr;     
+    }
+    .conf-container iframe{
+        grid-template-columns: 2fr;       
+        }   
+
+    .social-links-contact {
+        grid-template-columns: 1fr 1fr;
+    }   
+        
+    }
+    .page-container{
+        flex-wrap: wrap;
+    }
+    .form-container {
+        display: flex;
+
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 901px) and (max-width: 1200px) or (orientation: landscape) {
+    body{
+        flex-wrap: wrap;
+    }
     main{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -360,5 +395,9 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
        }
+      
+    .conf-container iframe{
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr 2fr;
+    }
 }
-
