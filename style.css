@@ -341,14 +341,11 @@ footer {
     .conf-container iframe{
         grid-template-columns: 2fr;       
     }       
-
     }
     .social-links-contact {
         grid-template-columns: 1fr;
     }
-    .contacto { 
-        
-    }
+    
 
 
 @media (min-width: 577px) and (max-width: 900px) or (orientation: landscape) {
@@ -372,8 +369,7 @@ footer {
 
     .social-links-contact {
         grid-template-columns: 1fr 1fr;
-    }   
-        
+    }         
     }
     .page-container{
         flex-wrap: wrap;
@@ -396,11 +392,9 @@ footer {
     .card-container{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-       }
-      
+       }      
     .conf-container iframe{
         grid-template-columns: 2fr 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr;
     }
-
 }

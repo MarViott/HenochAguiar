@@ -34,9 +34,9 @@
                 <h4>Gracias por visitar mi Portfolio!</h4>
                 <br>            
                 <div class="form-container">                 
-                <form action="mailto:henochaguiar@yahoo.com" method="post" >
-                <label for="nombre" class="form-label">Nombre y Apellido:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre y apellido" required>                
+                <form action="mailto:henochaguiar@yahoo.com" method="post" autocomplete="on" id="secureForm" onsubmit="return validateForm()">
+                <label for="username" class="form-label">Nombre y Apellido:</label>
+                <input type="text" id="username" name="username" placeholder="Ingrese su nombre y apellido" required>                
                <br>
                <div>
                 <label for="ocupacion">Ocupacion</label>            
@@ -54,13 +54,31 @@
                 <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
                 </div>
                 <div>
-                    <label for="mensaje" class="form-label">Mensaje:</label>
-                    <input type="text" id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" required></textarea>
+                    <label>
+                        Mensaje:
+                        <textarea name="mensaje" cols="35" maxlength="400" minlength="10" placeholder="Ingrese su mensaje" required></textarea>
+                    </label>
                 </div>                
                 <br>
-                <input type="submit" value="Enviar" class="boton" onclick="alert('Gracias por su mensaje!')">            
-            </form> 
+                <div>
+                  <input type="submit" value="Enviar" class="boton" onclick="alert('Gracias por su mensaje!')">  
+                </div>                            
+            </form>
+            <script>
+                function validateForm() {
+                  const username = document.getElementById("username").value;
+                  const email = document.getElementById("email").value;
             
+                  if (username.trim() === "" || email.trim() === "") {
+                    alert("Por favor, completa todos los campos.");
+                    return false; // Detiene el envío del formulario
+                  }
+                  
+                  alert("Formulario validado de manera segura.");
+                  return true; // Permite el envío del formulario
+                }
+              </script>
+              
         </body>
         </html>      
             </div>
