@@ -33,10 +33,10 @@
             <div class="contacto">
                 <h4>Gracias por visitar mi Portfolio!</h4>
                 <br>            
-                <div class="form-container">
-                <form  action="mailto:henochaguiar@yahoo.com" method="post" target="_blank">
+                <div class="form-container">                 
+                <form action="mailto:henochaguiar@yahoo.com" method="post" >
                 <label for="nombre" class="form-label">Nombre y Apellido:</label>
-                <input type="text" id="nombre" name="nombre" required>                
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre y apellido" required>                
                <br>
                <div>
                 <label for="ocupacion">Ocupacion</label>            
@@ -51,16 +51,18 @@
                 <br>              
                <div>                
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
                 </div>
                 <div>
                     <label for="mensaje" class="form-label">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
-                </form>
+                    <input type="text" id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" required></textarea>
+                </div>                
                 <br>
-                <input type="submit" value="Enviar" class="boton">
-            </form>
+                <input type="submit" value="Enviar" class="boton" onclick="alert('Gracias por su mensaje!')">            
+            </form> 
+            
+        </body>
+        </html>      
             </div>
         </div>
     </main>

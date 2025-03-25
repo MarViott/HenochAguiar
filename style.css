@@ -347,7 +347,7 @@ footer {
         grid-template-columns: 1fr;
     }
     .contacto { 
-        width: 90%;
+        
     }
 
 
@@ -380,8 +380,10 @@ footer {
     }
     .form-container {
         display: flex;
-
-}
+    }
+    .contacto { 
+        display: flex;
+    }
 
 @media (min-width: 901px) and (max-width: 1200px) or (orientation: landscape) {
     body{
@@ -400,4 +402,5 @@ footer {
         grid-template-columns: 2fr 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr;
     }
+
 }
