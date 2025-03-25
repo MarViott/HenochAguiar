@@ -81,7 +81,8 @@ main{
    padding: 5px;
    margin: 10px;
    transition: all 0.3s ease-in-out;
-   align-content: baseline;
+   align-content: center;
+   
     
 }
 .card img {
@@ -104,7 +105,9 @@ main{
 }
 
 .card-text {
-    padding: 10px;
+    padding: 5px;
+    text-align: center;
+    justify-content: flex-start;
 }
 
 .conf-container {
