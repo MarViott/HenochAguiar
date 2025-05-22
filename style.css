@@ -2,36 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /*border: 1px dotted black;*/
+    
 }
 
 body {
-    background-color: aliceblue;
+    background-color: whitesmoke;
     color: black;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
-    padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode {
-    background-color: #000;
-    color: #504e4e;
-}
-/* Botón de alternancia */
-#dark-mode-toggle {
-    padding: 10px 15px;
-    background-color: #6f7e8e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    #dark-mode-toggle:hover {
-    background-color: #0056b3;
-    }
 }
 
 a {
@@ -43,7 +23,11 @@ a {
 
     a:hover {
     color: rgb(8, 34, 75);
-    
+
+    }
+    a:visited {
+        color: whitesmoke;
+        transition: 1s;    
     }
     
 }
@@ -66,13 +50,12 @@ header {
     justify-content: space-between;
     background-color: rgb(232, 176, 92);
     align-items: center;
-    border-radius: 15px;
-
-    
+    padding: 0px 0px;
+    margin: 0px 0px;    
+    height: auto; 
+    width: 100%;   
   }
       
-
-
 header img {
     width: 60px;
     height: 100%;
@@ -90,16 +73,19 @@ nav {
     width: 30%;
     align-items: center;
     font-size: 24px;
-    padding: auto;    
+    padding: auto;
+    gap: 10px; 
+          
 }
 
+.slogan {
+   background-color: aliceblue;
+}
 
 main{
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: aliceblue;
-
-
 }
 
 .card {
@@ -226,10 +212,10 @@ main{
     width: 100%;
     justify-content: center;
     align-items: center;    
-    background-color: aliceblue;
-    margin: 20px;
+    background-color: aliceblue;  
+    margin: 10px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -237,12 +223,11 @@ main{
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
 }
 
 label {
-    display: block;
+    display: block;   
     margin-top: 10px;
     font-weight: bold;
 }
@@ -255,24 +240,30 @@ input, select, textarea {
     border-radius: 4px;
 }
 
-button {
-    margin-top: 15px;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+textarea {   
+    max-width: 100%;
+    max-height: 200px; /* Ajusta la altura según lo necesites */
+    width: 100%;   
+    height: auto;
+    resize: none; /* Esto impide que el usuario redimensione la textarea */
+    overflow: auto; /* Agrega desplazamiento si el contenido supera la altura */
+    }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-p#form-message {
+#form-message {
     margin-top: 10px;
     color: green;
     font-weight: bold;
+}
+
+.boton-submit {
+    background-color: rgb(232, 176, 92);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    width: 50%;
+    cursor: pointer;
 }
 
 .social-links-contact {
@@ -362,22 +353,6 @@ footer {
     border-radius: 15%;
     
 }
-
-/* Detectar preferencia de modo oscuro */
-@media (prefers-color-scheme: dark) {
-    body {
-      color: gray;
-      background-color: #000;
-    }
-  }
-  
-  /* Detectar preferencia de modo claro */
-  @media (prefers-color-scheme: light) {
-    body {
-      color: #000;
-      background-color: #fff;
-    }
-  }
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
     body{
