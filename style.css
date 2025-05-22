@@ -50,8 +50,8 @@ header {
     justify-content: space-between;
     background-color: rgb(232, 176, 92);
     align-items: center;
-    padding: 0px 0px;
-    margin: 0px 0px;    
+    padding: 5px 5px;  
+    gap: 10px;    
     height: auto; 
     width: 100%;   
   }
@@ -69,17 +69,24 @@ header img {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 30%;
     align-items: center;
     font-size: 24px;
-    padding: auto;
-    gap: 10px; 
+    padding: -20px -20px;
+    gap: 5px;
+    
+    a:hover {
+        color: rgb(8, 34, 75);
+        transition: 1s;
+    }
           
 }
 
 .slogan {
-   background-color: aliceblue;
+    background-color: aliceblue;  
+    padding: 10px;
+    text-align: center;  
 }
 
 main{
@@ -212,7 +219,7 @@ main{
     width: 100%;
     justify-content: center;
     align-items: center;    
-    background-color: aliceblue;  
+    background-image: url("./media/telecomunicaciones\,\ .png");  
     margin: 10px;
     border-radius: 15px;
     padding: 10px;
@@ -343,21 +350,22 @@ textarea {
     align-self: flex-end;
   }
   
-
 footer {
     background-color: rgb(232, 176, 92);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: white;
-    border-radius: 15%;
+    color: white;  
     
+}
+
+footer a {
+    color: white;
 }
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
     body{
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;        
     }
     main{
         grid-template-columns: 1fr;
@@ -375,15 +383,15 @@ footer {
     .social-links-contact {
         grid-template-columns: 1fr;
     }
-    .dark-mode-toggle {
-        display: inline-block;
-        font-size: 0.8rem;
-        padding: 6px 12px;
-        border-radius: 3px;
+    .page-container{
+        flex-wrap: wrap;
     }
-    .dark-mode-toggle:hover {
-        background-color: #555;
-        transform: scale(1.05);
+    .form-container {
+        display: flex;
+    }
+
+    .contacto { 
+        display: flex;
     }
 
 
@@ -416,6 +424,7 @@ footer {
     .form-container {
         display: flex;
     }
+   
     .contacto { 
         display: flex;
     }
@@ -437,13 +446,7 @@ footer {
         grid-template-columns: 2fr 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr;
     }
-    .dark-mode-toggle {
-        display: inline-block;
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-    .dark-mode-toggle:hover {
-        background-color: #555;
-        transform: scale(1.05);
-    }
+    .social-links-contact {
+        grid-template-columns: 1fr 1fr 1fr;
+    }    
 }
