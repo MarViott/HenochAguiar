@@ -34,56 +34,47 @@
             <div class="contacto">
                 <h4>Gracias por visitar mi Portfolio!</h4>
                 <br>            
-                <div class="form-container">                 
-                <form action="mailto:henochaguiar@yahoo.com" method="post" autocomplete="on" id="secureForm" onsubmit="return validateForm()">
-                <label for="username" class="form-label">Nombre y Apellido:</label>
-                <input type="text" id="username" name="username" placeholder="Ingrese su nombre y apellido" required>                
-               <br>
-               <div>
-                <label for="ocupacion">Ocupacion</label>            
-                <select name="ocupacion" id="ocupacion">
-                    <option value="seleccionar">Seleccionar</option>
-                     <option>Estudiante</option>
-                     <option>Docente</option>
-                     <option>Profesional</option>
-                     <option>Otro</option>                    
-                </select>
-                </div> 
-                <br>              
-               <div>                
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
-                </div>
-                <div class="mensaje">
-                    <label>
-                        Mensaje:
-                        <textarea name="mensaje" cols="35" maxlength="400" minlength="10" placeholder="Ingrese su mensaje" required></textarea>
-                    </label>
-                </div>                
-                <br>
-                <div>
-                  <input type="submit" value="Enviar" class="boton" onclick="alert('Gracias por su mensaje!')">  
-                </div>                            
-            </form>
-            <script>
-                function validateForm() {
-                  const username = document.getElementById("username").value;
-                  const email = document.getElementById("email").value;
-            
-                  if (username.trim() === "" || email.trim() === "") {
-                    alert("Por favor, completa todos los campos.");
-                    return false; // Detiene el envío del formulario
-                  }
-                  
-                  alert("Formulario validado de manera segura.");
-                  return true; // Permite el envío del formulario
-                }
-              </script>
-              
-        </body>
-        </html>      
+                <div class="contacto">               
+            <div class="form-container">                 
+                <form action="https://formspree.io/f/mgvkbeyz" method="POST" autocomplete="on" id="secureForm">
+                    <label for="username" class="form-label">Nombre y Apellido:</label>
+                    <input type="text" id="username" name="username" placeholder="Ingrese su nombre y apellido" required>
+                    
+                    <br>
+                    
+                    <div>
+                        <label for="ocupacion">Ocupación:</label>            
+                        <select name="ocupacion" id="ocupacion" required>
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="docente">Docente</option>
+                            <option value="profesional">Profesional</option>
+                            <option value="otro">Otro</option>                    
+                        </select>
+                    </div> 
+                    
+                    <br>              
+                    
+                    <div>                
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+                    </div>
+                    
+                    <div class="mensaje">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" cols="35" maxlength="400" minlength="10" placeholder="Ingrese su mensaje" required></textarea>
+                    </div>                
+                    
+                    <br>
+                    
+                    <div>
+                        <button type="submit" class="boton-submit">Enviar</button>
+                        <p id="form-message"></p>
+                    </div>                            
+                </form>
             </div>
-        </div>
+        </div>     
+         
     </main>
 
         <footer>
