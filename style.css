@@ -349,6 +349,22 @@ textarea {
     font-size: 12px;
     align-self: flex-end;
   }
+
+  #btnSubir {
+    background-color: rgb(53, 50, 50);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 100px;
+    right: 80px;    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #btnSubir:hover {
+    background-color: #595a5c;
+  }
   
 footer {
     background-color: rgb(232, 176, 92);
