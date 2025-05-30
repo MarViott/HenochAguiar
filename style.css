@@ -142,8 +142,9 @@ main{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 5px;
+}
 
-    .rating-section {    
+.rating-section {    
         gap: 5px;        
     }
     .star {
@@ -165,8 +166,8 @@ main{
 
     .icon:hover {
         transform: scale(1.2);
-    }    
-}
+}    
+
 
 .share-menu-container {
         background: white;
