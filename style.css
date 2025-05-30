@@ -440,8 +440,7 @@ footer a {
         grid-template-columns: 1fr;
        } 
     .card-container{
-        grid-template-columns: 1fr;
- 
+        grid-template-columns: 1fr; 
     }      
     .conf-container {
         grid-template-columns: 2fr;      
@@ -473,18 +472,15 @@ footer a {
         grid-template-rows: 1fr 1fr;
        } 
     .card-container{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        ;
-       }    
-
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));        
+       }
     .conf-container {
         grid-template-columns: 2fr 2fr; 
         grid-template-rows: 2fr 2fr;     
     }
     .conf-container iframe{
         grid-template-columns: 2fr;       
-        }   
-
+        }
     .social-links-contact {
         grid-template-columns: 1fr 1fr;
     }         
@@ -494,8 +490,7 @@ footer a {
     }
     .form-container {
         display: flex;
-    }
-   
+    }   
     .contacto { 
         display: flex;
     }
