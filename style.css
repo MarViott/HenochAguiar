@@ -42,7 +42,7 @@ a {
 
 h1, h3, h4 {
     text-align: center;
-    padding: 5px 3px;   
+    padding: 3px 3px;   
 }
 
 header {
@@ -68,7 +68,7 @@ header img {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 30%;
     align-items: center;
     font-size: 24px;
@@ -81,9 +81,9 @@ nav {
     }          
 }
 
-.slogan {
+.slogan {    
+    align-items: center;
     background-color: aliceblue;   
-    text-align: center;  
 }
 
 main{
@@ -165,7 +165,6 @@ main{
         transform: scale(1.2);
 }    
 
-
 .share-menu-container {
         background: white;
         border: 1px solid #ddd;
@@ -190,9 +189,8 @@ main{
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 2fr 2fr;
     gap: 20px;
-    /*border: 1px dotted black;*/
-    margin: 10px;
-    padding: 20px;
+    /*border: 1px dotted black;*/    
+    padding: 10px;
     border-radius: 15px;
     background-color: aliceblue;
 }
@@ -436,6 +434,9 @@ footer a {
     body{
         flex-wrap: wrap;        
     }
+    nav {
+      justify-content: flex-end;  
+    }
     main{
         grid-template-columns: 1fr;
        } 
@@ -468,6 +469,9 @@ footer a {
     body{
         flex-wrap: wrap;
     }
+    nav {
+        justify-content: flex-end;  
+      }
     main{
         grid-template-rows: 1fr 1fr;
        } 
