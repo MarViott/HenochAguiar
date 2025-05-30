@@ -448,7 +448,11 @@ footer a {
     }
     .conf-container iframe{
         grid-template-columns: 2fr;       
-    }       
+    }   
+    .col-12 {
+        background-color: #f8f9fa; /* Cambia el fondo solo en pantallas pequeñas */
+        padding: 15px; /* Ajusta el espaciado */
+    }   
     }
     .social-links-contact {
         grid-template-columns: 1fr;
@@ -459,7 +463,6 @@ footer a {
     .form-container {
         display: flex;
     }
-
     .contacto { 
         display: flex;
     }
@@ -491,6 +494,9 @@ footer a {
     }
     .page-container{
         flex-wrap: wrap;
+    }
+    .col {
+
     }
     .form-container {
         display: flex;
