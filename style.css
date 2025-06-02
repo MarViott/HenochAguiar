@@ -220,9 +220,11 @@ main{
     text-align: center;   
 
 }
-.sidebar h2 h3{     
-    width: bold;
-    margin: 10px;
+.sidebar h2,
+.sidebar h3 {
+  color: whitesmoke; /* Reemplaza con el color pastel que prefieras */
+  width: bold;
+  margin: 10px;
 }
 .sidebar img {
     width: 100%;
