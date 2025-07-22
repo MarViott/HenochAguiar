@@ -13,15 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="shortcut icon" href="./media/el futuro no espera - logo.ico" type="image/x-icon">
     <script src="./js/navbar.js"></script>
+    <script src="./js/searchbar.js"></script>
 </head>
 <body>
     <div class="page-container">
         <header>
             <a href="./index.html"><img src="./media/el futuro no espera - logo.jpg" alt="libro" class="logo"></a>
-            <form class="search-container" method="GET" action="#result">
-            <input type="search" name="q" placeholder="Buscar contenido..." />
-            <button type="submit">Buscar</button>
-            </form>
+              <form class="search-container" method="GET" action="#result" onsubmit="return false;">
+              <input type="search" id="busqueda" name="q" placeholder="Buscar contenido..." autocomplete="off" />
+              <button type="submit">Buscar</button>
+              </form>
+
             <nav id="menu">
               <a href="./index.html" data-label="Inicio" title="Inicio"><i class="fas fa-home"></i></a>
               <a href="./publicaciones.html" data-label="Publicaciones" title="Publicaciones"><i class="fas fa-book"></i></a> 
@@ -37,16 +39,16 @@
             <br>            
         </div>
         <body>       
-            <section class="container-fluid">
+            <section class="container-fluid" id="result">
                 <div class="container">
                     <div class="accordion" id="accordionExample">
-                        <div class="accordion-item bg2">
+                        <div class="accordion-item bg2" data-keywords="bienal periodismo comunicación inteligencia artificial debate taller conferencia unc">
                           <h2 class="accordion-header">
                             <button class="accordion-button 02" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 </i>2023
                             </button>
                           </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                          <div id="collapseZero" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="row"></div>
         <div class="row">
@@ -112,7 +114,7 @@
                               <div class="col"><strong>Decreto. Qué puede pasar con los servicios de teléfono, cable e internet</strong><br> <em>Por María Julieta Rumi, La Nación, 24 de Agosto de 2020</em><br>
                                 <a href="https://www.lanacion.com.ar/economia/telefonia-cable-internet-que-puede-pasar-servicio-nid2430248/" target="_blank" rel="noopener noreferrer">Leer más >>></a></div>  
                             </div>
-                          </>
+                          </s>
                         </div>
                           <div class="accordion-item bg2">
                               <h2 class="accordion-header">
@@ -186,7 +188,7 @@
                                   <div class="row"></div>
           <div class="row">
             <div class="col"><strong>Instalarán mil antenas de TDA Satelital en Chaco. </strong>El Directorio de la empresa ECOM Chaco S.A. se reunió con el vicepresidente de ARSAT, Henoch Aguiar, para coordinar acciones referidas al mantenimiento de la fibra óptica, el incremento del ancho de banda, y la instalación de antenas satelitales receptoras de Televisión Digital Abierta (TDA) en la provincia del Chaco</div> <em>LATAM Stelital, 26 de febrero de 2016.</em> 
-            <a href="https://latamsatelital.com/instalaran-mil-antenas-de-tda-satelital-en-chaco/" target="_blank">Leer más >>></a></div>
+            <a href="https://latamsatelital.com/instalaran-mil-antenas-de-tda-satelital-en-chaco/" target="_blank" rel="noopener">Leer más >>></a></div>
             <img src="./media/TDA-Satelital.jpg" alt="antena satelital" width="auto">
 
                               <div class="col"><strong>Crean comisión para redactar una Ley de Comunicaciones</strong>El Gobierno busca reemplazar las leyes de medios audiovisuales y de telecomunicaciones.<em>CLARIN, 9 de marzo de 2016.</em> 
@@ -201,7 +203,7 @@
                                   </i>2015
                               </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div id="collapse2015" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                   <div class="row"></div>
           <div class="row">
@@ -224,7 +226,7 @@
                                   </i>2014
                               </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div id="collapse2014" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                   <div class="row"></div>
           <div class="row">
@@ -244,12 +246,12 @@
                                   </i>2013
                               </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div id="collapse2013" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                   <div class="row"></div>
           <div class="row">
                               <div class="col"><strong>La ley de medios atrasa</strong> Si el tiempo es la medida del movimiento, como decían los clásicos, parece haber pasado una década desde la sanción de la ley de medios, en 2009. Ya entonces la ley desconocía los efectos de la revolución digital. Parecía redactada como a principios de los noventa, antes de Internet, de la convergencia digital entre telecomunicaciones y radiodifusión. Hoy, el envejecimiento de la ley es patente y muy menguante su aplicabilidad. <em>LA NACION, 22 de julio de 2013.</em> 
-                                <a href="https://www.lanacion.com.ar/opinion/la-ley-de-medios-atrasa-nid1603180/" target="_blank">Leer más >>></a>
+                                <a href="https://www.lanacion.com.ar/opinion/la-ley-de-medios-atrasa-nid1603180/" target="_blank" rel="noopener">Leer más >>></a>
                               </div>
                               <div class="col"><strong>Sólo el 35% de las antenas del paí­s tiene 3G</strong>El ex secretario de Comunicaciones atribuyó las fallas del servicio de telefonía celular a la ausencia de inversión, controles y competencia en el mercado<em>LA NACION, 22 de julio de 2013.</em> 
                                 <a href="https://www.iprofesional.com/tecnologia/171894-henoch-aguiar-solo-el-35-de-las-antenas-del-pais-tiene-3g" target="_blank" rel="noopener noreferrer">Leer más >>></a> 
@@ -266,7 +268,7 @@
                                   </i>2012
                               </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div id="collapse2012" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                   <div class="row"></div>
           <div class="row">
@@ -285,7 +287,7 @@
                                   </i>2011
                               </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div id="collapse2011" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                   <div class="row"></div>
           <div class="row">
@@ -306,7 +308,7 @@
                                   </i>2010 hasta 2000
                               </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div id="collapse2010" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                   <div class="row"></div>
           <div class="row">
