@@ -563,6 +563,9 @@ footer a {
     }
     .conf-container iframe{
         grid-template-columns: 2fr;       
+    }
+    .container-fluid{
+        grid-template-columns: 1fr;
     }   
    
     }
