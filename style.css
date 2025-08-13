@@ -1,8 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 
 body {
@@ -16,17 +15,17 @@ body {
 
 a {
     text-decoration: none;
-    color: whitesmoke;
+    color: black;
     width: bold;
     margin-right: auto;
     transition: 1s;
 
     a:hover {
-    color: rgb(8, 34, 75);
+    color: whitesmoke;
 
     }
     a:visited {
-        color: whitesmoke;
+        color: grey;
         transition: 1s;    
     }
     
@@ -102,9 +101,7 @@ main{
    padding: 5px;
    margin: 5px;
    transition: all 0.3s ease-in-out;
-   align-content: center;
-   
-    
+   align-content: center;    
 }
 .card img {
     width: 100%;
@@ -170,7 +167,7 @@ main{
         border: 1px solid #ddd;
         border-radius: 4px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+        z-index: 1000;        
     }
     
     .share-menu a {
@@ -505,10 +502,10 @@ footer {
     background-color: rgb(232, 176, 92);
     display: flex;
     flex-direction: row;    
-    justify-content: space-between
+    justify-content: space-between;
     align-items: center;
-    color: white;  
-    
+    padding: 10px;
+    color: white;    
 }
 
 footer a {
