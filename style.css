@@ -538,9 +538,7 @@ footer a {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-}   
-
-
+} 
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
     body{
