@@ -381,7 +381,7 @@ textarea {
     right: 24px;
     width: 64px;
     height: 64px;
-    background-color: greenyellow
+    background-color: greenyellow;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -540,7 +540,343 @@ footer a {
     cursor: pointer;
 } 
 
-/* Estilos responsivos para Clipping */
+/* Media query para tablets (577px - 900px) */
+@media (min-width: 577px) and (max-width: 900px) {
+    .page-container {
+        grid-template-columns: 1fr 2fr; /* Sidebar y contenido principal */
+        padding: 20px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para tarjetas */
+        gap: 20px;
+    }
+
+    .conf-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para conferencias */
+        gap: 20px;
+    }
+
+    .conf-container iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Ajustes para la sidebar en tablets */
+    .sidebar {
+        position: sticky;
+        top: 20px;
+        height: fit-content;
+    }
+}
+
+/* Media query para pantallas medianas (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .page-container {
+        grid-template-columns: 1fr 2fr;
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .conf-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .conf-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Media query para pantallas grandes (más de 1200px) */
+@media (min-width: 1201px) {
+    .page-container {
+        grid-template-columns: 1fr 3fr;
+        max-width: 1400px;
+        padding: 40px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .conf-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .conf-container iframe {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* Estilos responsivos específicos para móviles (índex, publicaciones, conferencias) */
+@media screen and (max-width: 576px) {
+    .page-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .conf-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .conf-container iframe {
+        width: 100%;
+        height: 200px;
+        margin: 10px 0;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ocultar sidebar en móviles o ponerla al final */
+    .sidebar {
+        order: 2; /* Mueve la sidebar después del contenido principal */
+        margin-top: 30px;
+    }
+
+    main {
+        order: 1;
+    }
+
+    /* Ajustes de tipografía para móviles */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Navegación en móviles */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
+
+/* Estilos responsivos para Clipping (se mantienen como están) */
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.accordion-body {
+    padding: 20px;
+}
+
+.accordion-body .row {
+    margin-bottom: 20px;
+}
+
+.accordion-body .col {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.accordion-body img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.accordion-body iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.accordion-body audio {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.accordion-body a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+/* Media queries para Clipping en móviles (se mantienen) */
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .container-fluid {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    .accordion-button {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+    
+    .accordion-body {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .accordion-body .row {
+        flex-direction: column;
+    }
+    
+    .accordion-body .col {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 25px;
+    }
+    
+    .accordion-body strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .accordion-body em {
+        display: block;
+        margin: 10px 0;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .accordion-body img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 15px 0;
+    }
+    
+    .accordion-body iframe {
+        width: 100%;
+        height: 200px;
+        margin: 15px 0;
+    }
+    
+    .accordion-body a {
+        word-break: break-word;
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+    
+    .slogan h1 {
+        font-size: 1.8rem;
+    }
+    
+    .slogan h3 {
+        font-size: 1.3rem;
+    }
+    
+    #btnSubir {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Media queries para Clipping en tablets (se mantienen) */
+@media (min-width: 577px) and (max-width: 900px) {
+    .accordion-button {
+        font-size: 1.05rem;
+        padding: 14px 18px;
+    }
+    
+    .accordion-body {
+        padding: 18px;
+    }
+    
+    .accordion-body .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .accordion-body iframe {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .accordion-body img {
+        max-width: 100%;
+    }
+}
+
+/* Media queries para Clipping en pantallas medianas (se mantienen) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .accordion-body .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .accordion-body .col {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 300px;
+    }
+    
+    .accordion-body iframe {
+        width: 100%;
+        height: 280px;
+    }
+}
+
+
+
+
 
 /* Estilos generales para el acordeón */
 .accordion {
@@ -601,19 +937,7 @@ footer a {
     text-decoration: underline;
     word-break: break-word;
 }
-
-/* Media queries para móviles */
-@media screen and (min-width: 0px) and (max-width: 576px) {
-    
-    /* Ajustes para el contenedor principal */
-    .container-fluid {
-        padding: 10px;
-    }
-    
-    .container {
-        padding: 0;
-    }
-    
+  
     /* Ajustes para el acordeón */
     .accordion-button {
         font-size: 1rem;
@@ -671,68 +995,8 @@ footer a {
         padding: 8px 0;
     }
     
-    /* Ajuste del slogan */
-    .slogan h1 {
-        font-size: 1.8rem;
-    }
-    
-    .slogan h3 {
-        font-size: 1.3rem;
-    }
-    
-    /* Botón subir */
-    #btnSubir {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}
-
-/* Media queries para tablets */
-@media (min-width: 577px) and (max-width: 900px) {
-    
-    .accordion-button {
-        font-size: 1.05rem;
-        padding: 14px 18px;
-    }
-    
-    .accordion-body {
-        padding: 18px;
-    }
-    
-    .accordion-body .col {
+    /* Ajustes para audio */
+    .accordion-body audio {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 15px 0;
     }
-    
-    .accordion-body iframe {
-        width: 100%;
-        height: 250px;
-    }
-    
-    .accordion-body img {
-        max-width: 100%;
-    }
-}
-
-/* Media queries para pantallas medianas */
-@media (min-width: 901px) and (max-width: 1200px) {
-    
-    .accordion-body .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-    .accordion-body .col {
-        flex: 1 1 calc(50% - 20px);
-        min-width: 300px;
-    }
-    
-    .accordion-body iframe {
-        width: 100%;
-        height: 280px;
-    }
-}
