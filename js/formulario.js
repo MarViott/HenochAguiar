@@ -1,3 +1,22 @@
+// Configuración de Toastr
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": true,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+};
+
 document.getElementById("secureForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -6,35 +25,37 @@ document.getElementById("secureForm").addEventListener("submit", function(event)
     let email = form.email.value.trim();
     let mensaje = form.mensaje.value.trim();
     let ocupacion = form.ocupacion.value;
-    let feedback = document.getElementById("form-message");
 
+    // Validación del nombre
     if (username.length < 3) {
-        feedback.textContent = "El nombre debe tener al menos 3 caracteres.";
-        feedback.style.color = "red";
+        toastr.error('El nombre debe tener al menos 3 caracteres.', 'Error de validación');
         return;
     }
 
+    // Validación del email
     if (!email.includes("@") || !email.includes(".")) {
-        feedback.textContent = "Por favor, ingresa un correo válido.";
-        feedback.style.color = "red";
+        toastr.error('Por favor, ingresa un correo válido.', 'Error de validación');
         return;
     }
 
+    // Validación de ocupación
     if (!ocupacion) {
-        feedback.textContent = "Por favor, selecciona tu ocupación.";
-        feedback.style.color = "red";
+        toastr.warning('Por favor, selecciona tu ocupación.', 'Campo requerido');
         return;
     }
 
+    // Validación del mensaje
     if (mensaje.length < 10) {
-        feedback.textContent = "El mensaje debe contener al menos 10 caracteres.";
-        feedback.style.color = "red";
+        toastr.error('El mensaje debe contener al menos 10 caracteres.', 'Error de validación');
         return;
     }
 
-    feedback.textContent = "Enviando...";
-    feedback.style.color = "green";
+    // Mostrar mensaje de carga
+    toastr.info('Enviando tu mensaje...', 'Procesando');
     
-    // Enviar el formulario a Formspree
-    form.submit();
+    // Simular envío exitoso (el formulario se enviará a Formspree)
+    setTimeout(() => {
+        toastr.success('¡Tu mensaje ha sido enviado correctamente!', 'Éxito');
+        form.submit();
+    }, 1000);
 });

@@ -520,6 +520,35 @@ footer a {
     cursor: pointer;
 }
 
+/* Personalización de Toastr */
+.toast-success {
+    background-color: #51A351 !important;
+}
+
+.toast-error {
+    background-color: #BD362F !important;
+}
+
+.toast-info {
+    background-color: rgb(232, 176, 92) !important;
+}
+
+.toast-warning {
+    background-color: #F89406 !important;
+}
+
+#toast-container > div {
+    opacity: 0.95;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+
+#toast-container > div:hover {
+    box-shadow: 0 0 18px rgba(0,0,0,0.4);
+    opacity: 1;
+    cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 
 /* Móviles (0px - 576px) */
