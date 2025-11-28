@@ -20,6 +20,10 @@
     <link rel="shortcut icon" href="./media/el futuro no espera - logo.ico" type="image/x-icon">
     <script src="./js/navbar.js"></script>
     
+    <!-- Toastr CSS con carga diferida -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></noscript>
+    
 </head>
 <body>
     <div class="page-container">
@@ -361,33 +365,24 @@
               </div>
           </footer> 
           <!-- Scripts -->
-          <script src="./js/barrabusqueda.js" defer></script>
-          <script src="./js/metatags.js" defer></script>
-          <script src="./js/navbar.js" defer></script>
+          <!-- jQuery PRIMERO (requerido por Toastr) -->
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
           
-          <!-- jQuery con defer -->
-          <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+          <!-- Toastr SEGUNDO -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
           
-          <!-- Toastr con defer -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
-          
-          <!-- Scripts propios con defer -->
-          <script src="./js/formulario.js" defer></script>
-          <script src="./js/review.js" defer></script>
-          <script src="./js/compartir.js" defer></script>
-          <script src="./js/btnsubir.js" defer></script>
-      </body>
-           <!-- Bootstrap javascript  -->
-           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-           
-        </body>
-        </html>
-
-
-
-
-
-
-
-
-
+          <!-- Scripts propios DESPUÉS (sin defer para barrabusqueda.js) -->
+          <script src="./js/barrabusqueda.js"></script>
+          <script src="./js/metatags.js"></script>
+          <script src="./js/navbar.js"></script>
+          <script src="./js/formulario.js"></script>
+          <script src="./js/review.js"></script>
+          <script src="./js/compartir.js"></script>
+          <script src="./js/btnsubir.js"></script>
+          </body>
+               <!-- Bootstrap javascript  -->
+               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+               
+          </body>
+          </html>
+         

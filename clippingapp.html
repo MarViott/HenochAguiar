@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <script src="modooscuro.js" defer></script>
+        
     </head>
     <body>
         <div class="page-container">
@@ -64,21 +65,22 @@
         <script src="script.js"></script>
     </div>
     
+    <!-- Scripts -->
     <!-- jQuery PRIMERO (requerido por Toastr) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <!-- Toastr SEGUNDO -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     
-    <!-- Scripts propios DESPUÉS -->
+    <!-- Scripts propios DESPUÉS (sin defer para barrabusqueda.js) -->
     <script src="./js/barrabusqueda.js"></script>
-    <script src="./js/metatags.js"></script>
-    <script src="./js/navbar.js"></script>
-    <script src="./js/formulario.js"></script>
-    <script src="./js/review.js"></script>
-    <script src="./js/compartir.js"></script>
-    <script src="./js/btnsubir.js"></script>
+    <script src="./js/metatags.js" defer></script>
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/formulario.js" defer></script>
+    <script src="./js/review.js" defer></script>
+    <script src="./js/compartir.js" defer></script>
+    <script src="./js/btnsubir.js" defer></script>
 
     </div>
 </body>
-</html
+</html>
