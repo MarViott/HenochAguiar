@@ -1,146 +1,175 @@
-mocha.setup('bdd');
-const expect = chai.expect;
+console.log('Script de búsqueda cargado');
 
-describe('Search Container', function() {
-    it('should have a div with class "search-container"', function() {
-        const container = document.querySelector('.search-container');
-        expect(container).to.exist;
-    });
-
-    it('should contain an input with id "search-input" and placeholder "Buscar..."', function() {
-        const input = document.getElementById('search-input');
-        expect(input).to.exist;
-        expect(input.type).to.equal('text');
-        expect(input.placeholder).to.equal('Buscar...');
-    });
-
-    it('should contain a button with id "search-button" and title "Buscar"', function() {
-        const button = document.getElementById('search-button');
-        expect(button).to.exist;
-        expect(button.title).to.equal('Buscar');
-    });
-
-    it('should contain an <i> element with class "fas fa-search" inside the button', function() {
-        const button = document.getElementById('search-button');
-        const icon = button.querySelector('i.fas.fa-search');
-        expect(icon).to.exist;
-    });
-});
-
-mocha.run();
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM cargado, inicializando búsqueda...');
+    
     const searchInput = document.getElementById('header-search-input');
     const searchBtn = document.getElementById('header-search-btn');
 
-    if (!searchInput || !searchBtn) return;
+    console.log('Input encontrado:', searchInput);
+    console.log('Botón encontrado:', searchBtn);
+
+    if (!searchInput || !searchBtn) {
+        console.error('ERROR: No se encontraron los elementos de búsqueda');
+        return;
+    }
 
     // Función de búsqueda
     function realizarBusqueda() {
         const termino = searchInput.value.trim().toLowerCase();
         
+        console.log('=== INICIANDO BÚSQUEDA ===');
+        console.log('Término:', termino);
+        
         if (!termino) {
-            toastr.warning('Por favor, ingresa un término de búsqueda', 'Búsqueda vacía');
+            alert('Por favor, ingresa un término de búsqueda');
             return;
         }
 
-        // Buscar en tarjetas
-        const cards = document.querySelectorAll('.card');
         let resultadosEncontrados = 0;
 
+        // Limpiar highlights anteriores
+        document.querySelectorAll('mark').forEach(mark => {
+            const texto = mark.textContent;
+            mark.replaceWith(texto);
+        });
+
+        // Buscar en tarjetas
+        const cards = document.querySelectorAll('.card');
+        console.log('Tarjetas encontradas:', cards.length);
+        
         cards.forEach(card => {
             const titulo = card.querySelector('h3')?.textContent.toLowerCase() || '';
             const texto = card.querySelector('.card-text')?.textContent.toLowerCase() || '';
             
             if (titulo.includes(termino) || texto.includes(termino)) {
                 card.style.display = 'flex';
-                card.style.animation = 'fadeIn 0.5s ease';
                 resultadosEncontrados++;
                 
-                // Highlight del término buscado
-                highlightText(card, termino);
+                // Resaltar en h3
+                const h3 = card.querySelector('h3');
+                if (h3 && h3.textContent.toLowerCase().includes(termino)) {
+                    h3.innerHTML = h3.textContent.replace(
+                        new RegExp(termino, 'gi'),
+                        match => `<mark style="background-color: yellow; padding: 2px;">${match}</mark>`
+                    );
+                }
+                
+                // Resaltar en card-text
+                const cardText = card.querySelector('.card-text');
+                if (cardText && cardText.textContent.toLowerCase().includes(termino)) {
+                    const originalText = cardText.textContent;
+                    cardText.innerHTML = originalText.replace(
+                        new RegExp(termino, 'gi'),
+                        match => `<mark style="background-color: yellow; padding: 2px;">${match}</mark>`
+                    );
+                }
             } else {
                 card.style.display = 'none';
             }
         });
 
-        // Buscar en acordeón (página de clipping)
-        const accordionItems = document.querySelectorAll('.accordion-body');
+        // Buscar en acordeones
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        console.log('Acordeones encontrados:', accordionItems.length);
+        
         accordionItems.forEach(item => {
-            const texto = item.textContent.toLowerCase();
-            const accordionButton = item.closest('.accordion-item')?.querySelector('.accordion-button');
+            const textoCompleto = item.textContent.toLowerCase();
             
-            if (texto.includes(termino)) {
-                item.closest('.accordion-item').style.display = 'block';
+            if (textoCompleto.includes(termino)) {
+                item.style.display = 'block';
                 resultadosEncontrados++;
-                highlightText(item, termino);
+                
+                // Expandir el acordeón
+                const collapse = item.querySelector('.accordion-collapse');
+                const button = item.querySelector('.accordion-button');
+                
+                if (collapse) {
+                    collapse.classList.add('show');
+                }
+                if (button) {
+                    button.classList.remove('collapsed');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+                
+                // Resaltar texto
+                const body = item.querySelector('.accordion-body');
+                if (body) {
+                    const paragraphs = body.querySelectorAll('strong, em, div');
+                    paragraphs.forEach(p => {
+                        if (p.textContent.toLowerCase().includes(termino)) {
+                            const originalText = p.textContent;
+                            p.innerHTML = originalText.replace(
+                                new RegExp(termino, 'gi'),
+                                match => `<mark style="background-color: yellow; padding: 2px;">${match}</mark>`
+                            );
+                        }
+                    });
+                }
             } else {
-                item.closest('.accordion-item').style.display = 'none';
+                item.style.display = 'none';
             }
         });
 
-        // Mostrar mensaje de resultados
-        if (resultadosEncontrados > 0) {
-            toastr.success(`Se encontraron ${resultadosEncontrados} resultado(s)`, 'Búsqueda completada');
-        } else {
-            toastr.info('No se encontraron resultados', 'Sin resultados');
-        }
-    }
+        console.log('Resultados encontrados:', resultadosEncontrados);
 
-    // Resaltar texto encontrado
-    function highlightText(element, termino) {
-        const textos = element.querySelectorAll('h3, .card-text, p');
-        textos.forEach(texto => {
-            const contenido = texto.innerHTML;
-            const regex = new RegExp(`(${termino})`, 'gi');
-            texto.innerHTML = contenido.replace(regex, '<mark style="background-color: yellow; padding: 2px;">$1</mark>');
-        });
+        // Mostrar mensaje
+        if (resultadosEncontrados > 0) {
+            if (typeof toastr !== 'undefined') {
+                toastr.success(`Se encontraron ${resultadosEncontrados} resultado(s)`, 'Búsqueda completada');
+            } else {
+                alert(`Se encontraron ${resultadosEncontrados} resultado(s)`);
+            }
+        } else {
+            if (typeof toastr !== 'undefined') {
+                toastr.info('No se encontraron resultados', 'Sin resultados');
+            } else {
+                alert('No se encontraron resultados para "' + termino + '"');
+            }
+        }
     }
 
     // Limpiar búsqueda
     function limpiarBusqueda() {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
+        console.log('Limpiando búsqueda...');
+        
+        // Mostrar todas las tarjetas
+        document.querySelectorAll('.card').forEach(card => {
             card.style.display = 'flex';
         });
 
-        const accordionItems = document.querySelectorAll('.accordion-item');
-        accordionItems.forEach(item => {
+        // Mostrar todos los acordeones
+        document.querySelectorAll('.accordion-item').forEach(item => {
             item.style.display = 'block';
         });
 
-        // Remover highlights
-        const marks = document.querySelectorAll('mark');
-        marks.forEach(mark => {
-            const parent = mark.parentNode;
-            parent.replaceChild(document.createTextNode(mark.textContent), mark);
-            parent.normalize();
+        // Quitar highlights
+        document.querySelectorAll('mark').forEach(mark => {
+            const texto = mark.textContent;
+            mark.replaceWith(texto);
         });
     }
 
     // Event listeners
-    searchBtn.addEventListener('click', realizarBusqueda);
+    searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Click en botón de búsqueda');
+        realizarBusqueda();
+    });
 
-    searchInput.addEventListener('keypress', (e) => {
+    searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
+            e.preventDefault();
+            console.log('Enter presionado');
             realizarBusqueda();
         }
     });
 
-    // Limpiar búsqueda cuando se borra el input
-    searchInput.addEventListener('input', (e) => {
+    searchInput.addEventListener('input', function(e) {
         if (e.target.value === '') {
             limpiarBusqueda();
         }
     });
 
-    // Agregar animación CSS
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    `;
-    document.head.appendChild(style);
+    console.log('Sistema de búsqueda completamente inicializado');
 });
