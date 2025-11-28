@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Henoch</title>
+    
+    <!-- Meta tags básicos -->
+    <meta name="description" content="Henoch Aguiar - Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina.">
+    <meta name="keywords" content="Henoch Aguiar, telecomunicaciones, políticas digitales, ARSAT, comunicaciones, Argentina, tecnología">
+    <meta name="author" content="Henoch Aguiar">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://henochaguiar.com/">
+    <meta property="og:title" content="Henoch Aguiar - Políticas Digitales y Telecomunicaciones">
+    <meta property="og:description" content="Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina.">
+    <meta property="og:image" content="https://henochaguiar.com/media/henochaguiar.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Henoch Aguiar">
+    <meta property="og:locale" content="es_AR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@henochaguiar">
+    <meta name="twitter:creator" content="@henochaguiar">
+    <meta name="twitter:url" content="https://henochaguiar.com/">
+    <meta name="twitter:title" content="Henoch Aguiar - Políticas Digitales y Telecomunicaciones">
+    <meta name="twitter:description" content="Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina.">
+    <meta name="twitter:image" content="https://henochaguiar.com/media/henochaguiar.jpeg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://henochaguiar.com/">
+    
+    <title>Henoch Aguiar - Políticas Digitales y Telecomunicaciones</title>
     
     <!-- Preconectar a dominios externos para mejorar rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,13 +111,30 @@
 <body>
     <div class="page-container">
         <header>
-            <a href="./index.html"><img src="./media/el futuro no espera - logo.jpg" alt="libro" class="logo"></a> 
+            <a href="./index.html">
+                <img src="./media/el futuro no espera - logo.jpg" alt="logo Henoch Aguiar" class="logo">
+            </a>
+            
             <nav id="menu">                
                 <a href="./publicaciones.html" data-label="Publicaciones"><i class="fas fa-book"></i></a> 
                 <a href="./conferencias.html" data-label="Conferencias"><i class="fas fa-microphone"></i></a>
                 <a href="./clipping.html" data-label="Clipping"><i class="fas fa-newspaper"></i></a>
                 <a href="./contacto.html" data-label="Contacto"><i class="fas fa-envelope"></i></a>
-            </nav>      
+            </nav>
+            
+            <!-- Barra de búsqueda compacta -->
+            <div class="header-search">
+                <input type="search" 
+                       id="header-search-input" 
+                       placeholder="Buscar..." 
+                       aria-label="Buscar en el sitio">
+                <button type="button" 
+                        id="header-search-btn" 
+                        aria-label="Buscar"
+                        title="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </header>
         <div class="slogan"> 
             <h1>Henoch Aguiar</h1>
@@ -338,7 +385,9 @@
     </div>
     <script src="./js/review.js"></script>
     <script src="./js/compartir.js"></script>
-    <!-- Scripts con defer para no bloquear renderización -->
+    <!-- Scripts -->
+    <script src="./js/barrabusqueda.js" defer></script>
+    <script src="./js/metatags.js" defer></script>
     <script src="./js/navbar.js" defer></script>
     
     <!-- jQuery con defer -->
@@ -352,6 +401,5 @@
     <script src="./js/review.js" defer></script>
     <script src="./js/compartir.js" defer></script>
     <script src="./js/btnsubir.js" defer></script>
-</body>
 </body>
 </html>
