@@ -4,6 +4,7 @@
 /* O si usas @font-face */
 @font-face {
     font-family: 'Poppins';
+    src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfedw.woff2') format('woff2');
     font-display: swap;
     /* ... otras propiedades */
 }
@@ -633,6 +634,9 @@ footer a {
     
     .page-container {
         padding: 0;
+        min-height: unset;
+        height: 100vh;
+        gap: 0;
     }
     
     header {

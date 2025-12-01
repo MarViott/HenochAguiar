@@ -1,395 +1,735 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Meta tags básicos -->
-    <meta name="description" content="Henoch Aguiar - Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina.">
-    <meta name="keywords" content="Henoch Aguiar, telecomunicaciones, políticas digitales, ARSAT, comunicaciones, Argentina, tecnología">
-    <meta name="author" content="Henoch Aguiar">
-    <meta name="robots" content="index, follow">
-    
+    <meta
+      name="description"
+      content="Henoch Aguiar - Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina."
+    />
+    <meta
+      name="keywords"
+      content="Henoch Aguiar, telecomunicaciones, políticas digitales, ARSAT, comunicaciones, Argentina, tecnología"
+    />
+    <meta name="author" content="Henoch Aguiar" />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://henochaguiar.com/">
-    <meta property="og:title" content="Henoch Aguiar - Políticas Digitales y Telecomunicaciones">
-    <meta property="og:description" content="Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina.">
-    <meta property="og:image" content="https://henochaguiar.com/media/henochaguiar.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Henoch Aguiar">
-    <meta property="og:locale" content="es_AR">
-    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://henochaguiar.com/" />
+    <meta
+      property="og:title"
+      content="Henoch Aguiar - Políticas Digitales y Telecomunicaciones"
+    />
+    <meta
+      property="og:description"
+      content="Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina."
+    />
+    <meta
+      property="og:image"
+      content="https://henochaguiar.com/media/henochaguiar.jpeg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Henoch Aguiar" />
+    <meta property="og:locale" content="es_AR" />
+
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@henochaguiar">
-    <meta name="twitter:creator" content="@henochaguiar">
-    <meta name="twitter:url" content="https://henochaguiar.com/">
-    <meta name="twitter:title" content="Henoch Aguiar - Políticas Digitales y Telecomunicaciones">
-    <meta name="twitter:description" content="Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina.">
-    <meta name="twitter:image" content="https://henochaguiar.com/media/henochaguiar.jpeg">
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@henochaguiar" />
+    <meta name="twitter:creator" content="@henochaguiar" />
+    <meta name="twitter:url" content="https://henochaguiar.com/" />
+    <meta
+      name="twitter:title"
+      content="Henoch Aguiar - Políticas Digitales y Telecomunicaciones"
+    />
+    <meta
+      name="twitter:description"
+      content="Especialista en Políticas Digitales y Telecomunicaciones. Ex Vicepresidente de ARSAT y ex Secretario de Comunicaciones de Argentina."
+    />
+    <meta
+      name="twitter:image"
+      content="https://henochaguiar.com/media/henochaguiar.jpeg"
+    />
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://henochaguiar.com/">
-    
+    <link rel="canonical" href="https://henochaguiar.com/" />
+
     <title>Henoch Aguiar - Políticas Digitales y Telecomunicaciones</title>
-    
+
     <!-- Preconectar a dominios externos para mejorar rendimiento -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
     <!-- CSS crítico inline para la primera vista -->
     <style>
-        /* CSS crítico mínimo */
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: whitesmoke;
-            color: black;
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        
-        .page-container {
-            display: grid;
-            grid-template-rows: 60px 100px 1fr 50px;
-            min-height: 100vh;
-            gap: 10px;
-            padding: 20px;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            background-color: rgb(232, 176, 92);
-            align-items: center;
-            padding: 5px;
-            width: 100%;
-        }
-        
-        .slogan {
-            align-items: center;
-            background-color: aliceblue;
-            text-align: center;
-        }
+      /* CSS crítico mínimo */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: whitesmoke;
+        color: black;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .page-container {
+        display: grid;
+        grid-template-rows: 60px 100px 1fr 50px;
+        min-height: 100vh;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(232, 176, 92);
+        align-items: center;
+        padding: 5px;
+        width: 100%;
+      }
+
+      .slogan {
+        align-items: center;
+        background-color: aliceblue;
+        text-align: center;
+      }
     </style>
-    
+
     <!-- Luego cargar el CSS completo -->
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css" />
+
     <!-- Fuentes con display=swap para evitar bloqueo -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap">
-    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap"
+    />
+
     <!-- Font Awesome con carga diferida -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
-    
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    /></noscript>
+
     <!-- Toastr CSS con carga diferida -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></noscript>
-    
-    <link rel="shortcut icon" href="./media/el futuro no espera - logo.ico" type="image/x-icon">
-    
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    /></noscript>
+
+    <link
+      rel="shortcut icon"
+      href="./media/el futuro no espera - logo.ico"
+      type="image/x-icon"
+    />
+
     <!-- Agrega este script pequeño en el <head> antes de cargar CSS externos -->
     <script>
-        // Helper para cargar CSS de forma asíncrona
-        function loadCSS(href) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = href;
-            document.head.appendChild(link);
-        }
+      // Helper para cargar CSS de forma asíncrona
+      function loadCSS(href) {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="page-container">
-        <header>
-            <a href="./index.html">
-                <img src="./media/el futuro no espera - logo.jpg" alt="logo Henoch Aguiar" class="logo">
-            </a>
-            
-            <nav id="menu">                
-                <a href="./publicaciones.html" data-label="Publicaciones"><i class="fas fa-book"></i></a> 
-                <a href="./conferencias.html" data-label="Conferencias"><i class="fas fa-microphone"></i></a>
-                <a href="./clipping.html" data-label="Clipping"><i class="fas fa-newspaper"></i></a>
-                <a href="./contacto.html" data-label="Contacto"><i class="fas fa-envelope"></i></a>
-            </nav>
-            
-            <!-- Barra de búsqueda compacta -->
-            <div class="header-search">
-                <input type="search" 
-                       id="header-search-input" 
-                       placeholder="Buscar..." 
-                       aria-label="Buscar en el sitio">
-                <button type="button" 
-                        id="header-search-btn" 
-                        aria-label="Buscar"
-                        title="Buscar">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </header>
-        <div class="slogan"> 
-            <h1>Henoch Aguiar</h1>
-            <h3>Políticas Digitales y Telcos</h3>            
+      <header>
+        <a href="./index.html">
+          <img
+            src="./media/el futuro no espera - logo.jpg"
+            alt="logo Henoch Aguiar"
+            class="logo"
+          />
+        </a>
+
+        <nav id="menu">
+          <a href="./publicaciones.html" data-label="Publicaciones"
+            ><i class="fas fa-book"></i
+          ></a>
+          <a href="./conferencias.html" data-label="Conferencias"
+            ><i class="fas fa-microphone"></i
+          ></a>
+          <a href="./clipping.html" data-label="Clipping"
+            ><i class="fas fa-newspaper"></i
+          ></a>
+          <a href="./contacto.html" data-label="Contacto"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </nav>
+
+        <!-- Barra de búsqueda compacta -->
+        <div class="header-search">
+          <input
+            type="search"
+            id="header-search-input"
+            placeholder="Buscar..."
+            aria-label="Buscar en el sitio"
+          />
+          <button
+            type="button"
+            id="header-search-btn"
+            aria-label="Buscar"
+            title="Buscar"
+          >
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-        <main>
-            <div class="card-container">
-                <div class="card">                                     
-                    <h3>“Hay que aportar cerebros argentinos al desarrollo del data center”</h3>
-                    <p class="card-text">La empresa OpenAi, aliada a la local Sur Energy, anunció una inversión de u$s 25.000 millones en el país. Sólo tendrá impacto si participan los profesionales y las universidades argentinas, asegura Henoch Aguiar, exsecretario de Comunicaciones. El elevado costo energético del proyecto. <br> 
-                        <em><a href="https://twitter.com/gustavofabian">Por Gustavo García.</a> Diario LA PRENSA - Suplemento Económico. Domingo 19 de Octubre de 2025.</em> </p>     
-                                          
-                    <button class="btn"><a href="https://www.laprensa.com.ar/Hay-que-aportar-cerebros-argentinos-al-desarrollo-del-data-center-565241.note.aspx" target="_blank" rel="noopener noreferrer">Leer más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
+      </header>
+      <div class="slogan">
+        <h1>Henoch Aguiar</h1>
+        <h3>Políticas Digitales y Telcos</h3>
+      </div>
+      <main>
+        <div class="card-container">
+          <div class="card">
+            <h3>
+              “Hay que aportar cerebros argentinos al desarrollo del data
+              center”
+            </h3>
+            <p class="card-text">
+              La empresa OpenAi, aliada a la local Sur Energy, anunció una
+              inversión de u$s 25.000 millones en el país. Sólo tendrá impacto
+              si participan los profesionales y las universidades argentinas,
+              asegura Henoch Aguiar, exsecretario de Comunicaciones. El elevado
+              costo energético del proyecto. <br />
+              <em
+                ><a href="https://twitter.com/gustavofabian"
+                  >Por Gustavo García.</a
+                >
+                Diario LA PRENSA - Suplemento Económico. Domingo 19 de Octubre
+                de 2025.</em
+              >
+            </p>
 
-                <div class="card">                    
-                <h3>“La Inteligencia Artificial es como la bicicleta, hay que darse dos buenos porrazos para aprender a manejarla”</h3>
-                <p class="card-text">Henoch Aguiar, especialista en telecomunicaciones, desarrollo digital y sociedad del conocimiento, formuló esa comparación para animar a la población a manejar la IA, porque es una herramienta que está aquí y ahora. <br> <em>“Entrando en órbita” con Osvaldo Medina y Paula Rod. Radio HALLEY de Santa Fe. Martes 12 de Agosto de 2025</em>
-                    </p>
-                    <audio controls style="height:50px; width:99%;" scrolling="no" src="http://radiohalley.com.ar/wp-content/uploads/2025/08/08-12-Henoch-Aguiar.mp3" title="La Inteligencia Artificial es como la bicicleta, hay que darse dos buenos porrazos para aprender a manejarla" frameborder="0"></audio>
-                    <br>
-                    <button class="btn" title="Escuchar"><a href="https://radiohalley.com.ar/la-inteligencia-artificial-es-como-la-bicicleta-hay-que-darse-dos-buenos-porrazos-para-aprender-a-manejarla/" target="_blank" rel="noopener noreferrer">Escuchar más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-            
-                 <div class="card">
-                    <img src="./media/fusiontelcos.jpg" alt="logo de Telefónica y Telecom Argentina">                 
-                    <h3>“Telefónica de Argentina: ¿Fusión o concentración?”</h3>
-                    <p class="card-text">La empresa también se fue del país. “La noticia tomó por sorpresa al gobierno, a los inversores interesados y al mercado”, sostiene el autor. A partir de ahora, Telecom tiene “un nivel de concentración inédito” en el soñado "cuádruple play": telefonía fija, celular, internet y cable en un solo bolsillo. <br> <em>Diario PERFIL - Opinión por Henoch Aguiar, Lunes 21 de Julio de 2025.</em> </p>     
-                                          
-                    <button class="btn"><a href="https://www.perfil.com/noticias/opinion/telefonica-de-argentina-fusion-o-concentracion.phtml" target="_blank" rel="noopener noreferrer">Leer más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./media/Telefonica-argentina-720x340.jpg" alt="logo de Telefónica">                 
-                    <h3>“Tras la decisión del gobierno argentino de suspender la compra de Telefónica, Telecom aclaró que ambas compañías operan de forma independiente.”</h3>
-                    <p class="card-text">Telecom informó a la Comisión de Valores que se notificó de la decisión del gobierno. <br> <em>TeleSemana - Andrea Catalano, Martes 25 de Marzo de 2025.</em> </p>     
-                                          
-                    <button class="btn"><a href="https://www.telesemana.com/blog/2025/03/25/tras-la-decision-del-gobierno-argentino-de-suspender-la-compra-de-telefonica-telecom-aclaro-que-ambas-companias-continuan-operando-de-manera-independiente/" target="_blank" rel="noopener noreferrer">Leer más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">                    
-                    <h3>Pablo y a la bolsa</h3>
-                    <p class="card-text">Entrevista de Pablo Wende a Henoch Aguiar, ex-Secretario de Comunicaciones y VP de Arsat, a propósito de la compra de Telefónica de Argentina por parte de Telecom. <br> <em>RADIO MILENIUM. Martes 25 de Febrero de 2025</em>
-                        </p>
-                        <iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/0Pg9BuXZ3mS9C3025Ci8oG?utm_source=generator" width="99%" height="252" frameBorder="0" allowfullscreen rel="noopener noreferrer" title="escuchar"></iframe>
-                        <br>
-                        <button class="btn" title="Escuchar"><a href="https://open.spotify.com/episode/0Pg9BuXZ3mS9C3025Ci8oG?si=346f0f250b05425f" target="_blank" rel="noopener noreferrer">Escuchar más</a></button>       
-                        <div class="usuario-container">
-                            <div class="rating-section" data-card-id="1">
-                                <span class="star" data-value="1">★</span>
-                                <span class="star" data-value="2">★</span>
-                                <span class="star" data-value="3">★</span>
-                                <span class="star" data-value="4">★</span>
-                                <span class="star" data-value="5">★</span>
-                            </div>
-                            <div class="action">
-                                <span class="icon share-icon" >🔗</span>
-                            </div>
-                        </div>
-                    </div>
-                <div class="card">
-                    <img src="./media/henochaguiar.jpeg" alt="Henoch Aguiar">
-                    <h3>"Arsat no está hecho para ser un prestador masivo"</h3>
-                    <p class="card-text">"Está pensado para llevar conectividad a 1.700 prestadores en la Argentina Profunda. Un sistema celular de Arsat es un disparate", consideró el exsecretario de Comunicación de la Nación, al coincidir con la licitación de frecuencias del Estado para comunicaciones celulares. <br> <em>RADIO CONTINENTAL. Martes 22 de octubre de 2024 14:47</em></p>
-                        <iframe width="99%" height="50px" scrolling="no" src="https://continental-assets.tadevel-cdn.com/6717e5118e1debdfc376830a/video.mp4" frameborder="0"></iframe>
-                        <br>
-                    <button class="btn"><a href="https://www.continental.com.ar/programas/bravo-continental/henoch-aguiar---arsat-no-esta-hecho-para-ser-un-prestador-masivo-_a6717ddd98e1debdfc37567bd" target="_blank" rel="noopener noreferrer" title="Escuchar">Escuchar más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ikMvb-pLzO8?si=VKzllqUc6orMkXaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>Henoch Aguiar analiza la ley de medios</h3>
-                    <p class="card-text">El periodista Carlos Mira entrevista al ex-secretario de Comunicación de la Nación, al coincidir con la licitación de frecuencias del Estado para comunicaciones celulares. <br><em>INFOBAE</em></p>
-                    <button class="btn"><a href="https://youtu.be/ikMvb-pLzO8" target="_blank" rel="noopener noreferrer">Ver más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./media/mapaargentina.jpg" alt="mapa de Argentina y celular">
-                    
-                    <h3>Comunicaciones y medios: ¿qué propone la oposición para el próximo Gobierno? </h3>
-                    <p class="card-text">iProfesional habló con Henoch Aguiar, ex vicepresidente de ARSAT en el periodo de gobierno de Mauricio Macri y exsecretario de Comunicaciones durante 1999-2001. Impulsó el decreto 764/00 que en esa época estableció la desregulación de las comunicaciones (luego del periodo de exclusividad de las telefónicas fijas).</p>  <em>iPROFESIONAL, 13 de junio de 2023</em>   
-                                          
-                    <button class="btn"><a href="https://www.iprofesional.com/tecnologia/383362-comunicaciones-y-medios-que-propone-la-oposicion-2023" target="_blank" rel="noopener noreferrer" title="Leer más">Leer más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./media/presidentedearsat.jpg" alt="photo">
-                    <h3>"La política de cielos abiertos incrementó los servicios de ARSAT"</h3>
-                    <p class="card-text">Dialogamos con el director de ARSAT, Henoch Aguiar, sobre el DNU del presidente Macri que modificó el artículo 11 de la Ley de Desarrollo de la Industria Satelital (27.208) que impedía ceder frecuencias de telefonía que pertenecían a Arsat con carácter preferencial para atender zonas desfavorables. <br><em>Radio CUT, 28 de enero, 2019 17:45</em></p>
-                    <iframe width="98%" height="65px" scrolling="no" frameborder="no" src="//us.radiocut.fm/audiocut/embed/mini/henoch-aguiar-a-arsat-iii-habia-que-mejorarlo-para-no-sacar-un-ford-falcon-al-aire/" rel="noopener noreferrer"></iframe>
-                    <button class="btn"><a href="https://us.radiocut.fm/audiocut/henoch-aguiar-a-arsat-iii-habia-que-mejorarlo-para-no-sacar-un-ford-falcon-al-aire/?replay=1" target="_blank" rel="noopener noreferrer" title="Escuchar">Ver más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./media/uba.jpg" alt="photo">
-                    <h3>En la UBA, más humanos y tecnológicos que nunca</h3>
-                    <p class="card-text">Un evento del Laboratorio de Innovación e Inteligencia Artificial de la Facultad de Derecho reflexionó sobre cómo Argentina y América Latina pueden insertarse en la cuarta revolución industrial. <em>Diario PERFIL, 10 de diciembre de 2022</em></p>
-                    <button class="btn"><a href="https://www.perfil.com/noticias/elobservador/en-la-uba-mas-humanos-y-tecnologicos-que-nunca.phtml" target="_blank" rel="noopener noreferrer" title="Leer más">Leer más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/j3EBJ3XoJe8?si=UXi2gqtbpf1V7N6R" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen rel="noopener noreferrer" title="Henoch Aguiar sobre la ley de medios"></iframe>
-                    <h3>Henoch Aguiar sobre la ley de medios</h3>
-                    <p class="card-text"></p>
-                    <button class="btn"><a href="https://youtu.be/j3EBJ3XoJe8?si=5XA2Fw6XloRjlv_F" target="_blank" rel="noopener noreferrer" title="Ver más">Ver más</a></button>
-                    <div class="usuario-container">
-                        <div class="rating-section" data-card-id="1">
-                            <span class="star" data-value="1">★</span>
-                            <span class="star" data-value="2">★</span>
-                            <span class="star" data-value="3">★</span>
-                            <span class="star" data-value="4">★</span>
-                            <span class="star" data-value="5">★</span>
-                        </div>
-                        <div class="action">
-                            <span class="icon share-icon" >🔗</span>
-                        </div>
-                    </div>
-                </div>
-            </div>           
+            <button class="btn">
+              <a
+                href="https://www.laprensa.com.ar/Hay-que-aportar-cerebros-argentinos-al-desarrollo-del-data-center-565241.note.aspx"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Leer más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
 
-            <div class="sidebar">
-                <h2>TRAYECTORIA</h2>
-                <img src="./media/henochaguiar8.jpg" alt="henoch aguiar" id="henochaguiar">
-                <h3>CONSULTOR, REGULADOR, DOCENTE</h3>
-                <p>Ex Vicepresidente y Director de la empresa estatal ARSAT Argentina, desde 2016 hasta 2020. Secretario de Comunicaciones de la Argentina desde diciembre de 1999 hasta el 2001. <br> 
-                    <br>Anteriormente fui elegido, por concurso, miembro del Directorio de la Comisión Nacional de Telecomunicaciones (1993-95). Asesor de la Comisión de Comunicaciones de la Cámara de Diputados (1992-93), de la Secretaría General de Presidencia (1987-89) y de la Secretaría de Información Pública (1985-87). <br> 
+          <div class="card">
+            <h3>
+              “La Inteligencia Artificial es como la bicicleta, hay que darse
+              dos buenos porrazos para aprender a manejarla”
+            </h3>
+            <p class="card-text">
+              Henoch Aguiar, especialista en telecomunicaciones, desarrollo
+              digital y sociedad del conocimiento, formuló esa comparación para
+              animar a la población a manejar la IA, porque es una herramienta
+              que está aquí y ahora. <br />
+              <em
+                >“Entrando en órbita” con Osvaldo Medina y Paula Rod. Radio
+                HALLEY de Santa Fe. Martes 12 de Agosto de 2025</em
+              >
+            </p>
+            <audio
+              controls
+              style="height: 50px; width: 99%"
+              scrolling="no"
+              src="http://radiohalley.com.ar/wp-content/uploads/2025/08/08-12-Henoch-Aguiar.mp3"
+              title="La Inteligencia Artificial es como la bicicleta, hay que darse dos buenos porrazos para aprender a manejarla"
+              frameborder="0"
+            ></audio>
+            <br />
+            <button class="btn" title="Escuchar">
+              <a
+                href="https://radiohalley.com.ar/la-inteligencia-artificial-es-como-la-bicicleta-hay-que-darse-dos-buenos-porrazos-para-aprender-a-manejarla/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Escuchar más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
 
-                    <br>Elaboré diversos proyectos de ley relacionados con las telecomunicaciones y la radiodifusión. <br>
+          <div class="card">
+            <img
+              src="./media/fusiontelcos.jpg"
+              alt="logo de Telefónica y Telecom Argentina"
+            />
+            <h3>“Telefónica de Argentina: ¿Fusión o concentración?”</h3>
+            <p class="card-text">
+              La empresa también se fue del país. “La noticia tomó por sorpresa
+              al gobierno, a los inversores interesados y al mercado”, sostiene
+              el autor. A partir de ahora, Telecom tiene “un nivel de
+              concentración inédito” en el soñado "cuádruple play": telefonía
+              fija, celular, internet y cable en un solo bolsillo. <br />
+              <em
+                >Diario PERFIL - Opinión por Henoch Aguiar, Lunes 21 de Julio de
+                2025.</em
+              >
+            </p>
 
-                    <br>Desarrollé una amplia carrera académica, siendo profesor titular de Derecho a la Información y de Comunicación Organizacional, en la Carrera de Comunicación Social de la Universidad de Buenos Aires. Además dicté clases de comunicaciones y telecomunicaciones en los postgrados de las Universidades de Belgrano, Austral, San Andrés, Católica Argentina, FLACSO y Palermo. <br>                    
-                    <br>En mi carácter de abogado experto en telecomunicaciones, he sido fundador y socio titular del estudio Aguiar & Asociados, como consultor especializado en comunicaciones, telecomunicaciones y radiodifusión. <br>                    
-                    <br>Licenciado en Derecho. Realicé mis estudios en las Universidades de Buenos Aires, París I y Grenoble II. Soy graduado del Master en Economía y Finanzas del Institut d´ Études Politiques de París  y obtuve un Master en Dirección de Empresas en el IAE, Instituto de Altos Estudios Empresariales. <br>                    
-                    <br>Miembro del Club Político Argentino y de la Academia Argentina de Artes y Ciencias de la Comunicación.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/henochaguiar/?originalSubdomain=ar" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
-                    <a href="https://www.instagram.com/henochaguiar/" target="_blank" rel="noopener noreferrer" ><i class="fab fa-instagram" title="Instagram"></i></a>
-                    <a href="https://twitter.com/henochaguiar" target="_blank"rel="noopener noreferrer"><i class="fab fa-x-twitter"  title="Twitter"></i></a>
-                </div> 
-            </div>            
-        </main> 
+            <button class="btn">
+              <a
+                href="https://www.perfil.com/noticias/opinion/telefonica-de-argentina-fusion-o-concentracion.phtml"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Leer más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./media/Telefonica-argentina-720x340.jpg"
+              alt="logo de Telefónica"
+            />
+            <h3>
+              “Tras la decisión del gobierno argentino de suspender la compra de
+              Telefónica, Telecom aclaró que ambas compañías operan de forma
+              independiente.”
+            </h3>
+            <p class="card-text">
+              Telecom informó a la Comisión de Valores que se notificó de la
+              decisión del gobierno. <br />
+              <em>TeleSemana - Andrea Catalano, Martes 25 de Marzo de 2025.</em>
+            </p>
 
-        <footer style="justify-content: center">
-            <p>&copy; 2024 <strong>Henoch Aguiar</strong>. Todos los derechos reservados. - Desarrollado por <a href="https://marisaviotti.com.ar/" target="_blank" rel="noopener noreferrer">Marisa Viotti</a>
-            .</p> 
-            
-        </footer> 
+            <button class="btn">
+              <a
+                href="https://www.telesemana.com/blog/2025/03/25/tras-la-decision-del-gobierno-argentino-de-suspender-la-compra-de-telefonica-telecom-aclaro-que-ambas-companias-continuan-operando-de-manera-independiente/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Leer más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Pablo y a la bolsa</h3>
+            <p class="card-text">
+              Entrevista de Pablo Wende a Henoch Aguiar, ex-Secretario de
+              Comunicaciones y VP de Arsat, a propósito de la compra de
+              Telefónica de Argentina por parte de Telecom. <br />
+              <em>RADIO MILENIUM. Martes 25 de Febrero de 2025</em>
+            </p>
+            <iframe
+              class="spotify-embed"
+              src="https://open.spotify.com/embed/episode/0Pg9BuXZ3mS9C3025Ci8oG?utm_source=generator"
+              width="99%"
+              height="252"
+              frameborder="0"
+              allowfullscreen
+              rel="noopener noreferrer"
+              title="escuchar"
+            ></iframe>
+            <br />
+            <button class="btn" title="Escuchar">
+              <a
+                href="https://open.spotify.com/episode/0Pg9BuXZ3mS9C3025Ci8oG?si=346f0f250b05425f"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Escuchar más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./media/henochaguiar.jpeg" alt="Henoch Aguiar" />
+            <h3>"Arsat no está hecho para ser un prestador masivo"</h3>
+            <p class="card-text">
+              "Está pensado para llevar conectividad a 1.700 prestadores en la
+              Argentina Profunda. Un sistema celular de Arsat es un disparate",
+              consideró el exsecretario de Comunicación de la Nación, al
+              coincidir con la licitación de frecuencias del Estado para
+              comunicaciones celulares. <br />
+              <em>RADIO CONTINENTAL. Martes 22 de octubre de 2024 14:47</em>
+            </p>
+            <iframe
+              width="99%"
+              height="50px"
+              scrolling="no"
+              src="https://continental-assets.tadevel-cdn.com/6717e5118e1debdfc376830a/video.mp4"
+              frameborder="0"
+            ></iframe>
+            <br />
+            <button class="btn">
+              <a
+                href="https://www.continental.com.ar/programas/bravo-continental/henoch-aguiar---arsat-no-esta-hecho-para-ser-un-prestador-masivo-_a6717ddd98e1debdfc37567bd"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Escuchar"
+                >Escuchar más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/ikMvb-pLzO8?si=VKzllqUc6orMkXaA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h3>Henoch Aguiar analiza la ley de medios</h3>
+            <p class="card-text">
+              El periodista Carlos Mira entrevista al ex-secretario de
+              Comunicación de la Nación, al coincidir con la licitación de
+              frecuencias del Estado para comunicaciones celulares. <br /><em
+                >INFOBAE</em
+              >
+            </p>
+            <button class="btn">
+              <a
+                href="https://youtu.be/ikMvb-pLzO8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./media/mapaargentina.jpg"
+              alt="mapa de Argentina y celular"
+            />
+
+            <h3>
+              Comunicaciones y medios: ¿qué propone la oposición para el próximo
+              Gobierno?
+            </h3>
+            <p class="card-text">
+              iProfesional habló con Henoch Aguiar, ex vicepresidente de ARSAT
+              en el periodo de gobierno de Mauricio Macri y exsecretario de
+              Comunicaciones durante 1999-2001. Impulsó el decreto 764/00 que en
+              esa época estableció la desregulación de las comunicaciones (luego
+              del periodo de exclusividad de las telefónicas fijas).
+            </p>
+            <em>iPROFESIONAL, 13 de junio de 2023</em>
+
+            <button class="btn">
+              <a
+                href="https://www.iprofesional.com/tecnologia/383362-comunicaciones-y-medios-que-propone-la-oposicion-2023"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Leer más"
+                >Leer más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./media/presidentedearsat.jpg" alt="photo" />
+            <h3>
+              "La política de cielos abiertos incrementó los servicios de ARSAT"
+            </h3>
+            <p class="card-text">
+              Dialogamos con el director de ARSAT, Henoch Aguiar, sobre el DNU
+              del presidente Macri que modificó el artículo 11 de la Ley de
+              Desarrollo de la Industria Satelital (27.208) que impedía ceder
+              frecuencias de telefonía que pertenecían a Arsat con carácter
+              preferencial para atender zonas desfavorables. <br /><em
+                >Radio CUT, 28 de enero, 2019 17:45</em
+              >
+            </p>
+            <iframe
+              width="98%"
+              height="65px"
+              scrolling="no"
+              frameborder="no"
+              src="//us.radiocut.fm/audiocut/embed/mini/henoch-aguiar-a-arsat-iii-habia-que-mejorarlo-para-no-sacar-un-ford-falcon-al-aire/"
+              rel="noopener noreferrer"
+            ></iframe>
+            <button class="btn">
+              <a
+                href="https://us.radiocut.fm/audiocut/henoch-aguiar-a-arsat-iii-habia-que-mejorarlo-para-no-sacar-un-ford-falcon-al-aire/?replay=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Escuchar"
+                >Ver más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./media/uba.jpg" alt="photo" />
+            <h3>En la UBA, más humanos y tecnológicos que nunca</h3>
+            <p class="card-text">
+              Un evento del Laboratorio de Innovación e Inteligencia Artificial
+              de la Facultad de Derecho reflexionó sobre cómo Argentina y
+              América Latina pueden insertarse en la cuarta revolución
+              industrial. <em>Diario PERFIL, 10 de diciembre de 2022</em>
+            </p>
+            <button class="btn">
+              <a
+                href="https://www.perfil.com/noticias/elobservador/en-la-uba-mas-humanos-y-tecnologicos-que-nunca.phtml"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Leer más"
+                >Leer más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/j3EBJ3XoJe8?si=UXi2gqtbpf1V7N6R"
+              title="YouTube video player"
+              frameborder="0"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              rel="noopener noreferrer"
+              title="Henoch Aguiar sobre la ley de medios"
+            ></iframe>
+            <h3>Henoch Aguiar sobre la ley de medios</h3>
+            <p class="card-text"></p>
+            <button class="btn">
+              <a
+                href="https://youtu.be/j3EBJ3XoJe8?si=5XA2Fw6XloRjlv_F"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Ver más"
+                >Ver más</a
+              >
+            </button>
+            <div class="usuario-container">
+              <div class="rating-section" data-card-id="1">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <div class="action">
+                <span class="icon share-icon">🔗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <h2>TRAYECTORIA</h2>
+          <img
+            src="./media/henochaguiar8.jpg"
+            alt="henoch aguiar"
+            id="henochaguiar"
+          />
+          <h3>CONSULTOR, REGULADOR, DOCENTE</h3>
+          <p>
+            Ex Vicepresidente y Director de la empresa estatal ARSAT Argentina,
+            desde 2016 hasta 2020. Secretario de Comunicaciones de la Argentina
+            desde diciembre de 1999 hasta el 2001. <br />
+            <br />Anteriormente fui elegido, por concurso, miembro del
+            Directorio de la Comisión Nacional de Telecomunicaciones (1993-95).
+            Asesor de la Comisión de Comunicaciones de la Cámara de Diputados
+            (1992-93), de la Secretaría General de Presidencia (1987-89) y de la
+            Secretaría de Información Pública (1985-87). <br />
+
+            <br />Elaboré diversos proyectos de ley relacionados con las
+            telecomunicaciones y la radiodifusión. <br />
+
+            <br />Desarrollé una amplia carrera académica, siendo profesor
+            titular de Derecho a la Información y de Comunicación
+            Organizacional, en la Carrera de Comunicación Social de la
+            Universidad de Buenos Aires. Además dicté clases de comunicaciones y
+            telecomunicaciones en los postgrados de las Universidades de
+            Belgrano, Austral, San Andrés, Católica Argentina, FLACSO y Palermo.
+            <br />
+            <br />En mi carácter de abogado experto en telecomunicaciones, he
+            sido fundador y socio titular del estudio Aguiar & Asociados, como
+            consultor especializado en comunicaciones, telecomunicaciones y
+            radiodifusión. <br />
+            <br />Licenciado en Derecho. Realicé mis estudios en las
+            Universidades de Buenos Aires, París I y Grenoble II. Soy graduado
+            del Master en Economía y Finanzas del Institut d´ Études Politiques
+            de París y obtuve un Master en Dirección de Empresas en el IAE,
+            Instituto de Altos Estudios Empresariales. <br />
+            <br />Miembro del Club Político Argentino y de la Academia Argentina
+            de Artes y Ciencias de la Comunicación.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/henochaguiar/?originalSubdomain=ar"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin" title="LinkedIn"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/henochaguiar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram" title="Instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com/henochaguiar"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-x-twitter" title="Twitter"></i
+            ></a>
+          </div>
+        </div>
+      </main>
+
+      <footer style="justify-content: center">
+        <p>
+          &copy; 2024 <strong>Henoch Aguiar</strong>. Todos los derechos
+          reservados. - Desarrollado por
+          <a
+            href="https://marisaviotti.com.ar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Marisa Viotti</a
+          >
+          .
+        </p>
+      </footer>
     </div>
-        
+
     <!-- jQuery PRIMERO (requerido por Toastr) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <!-- Toastr SEGUNDO -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    
+
     <!-- Scripts propios DESPUÉS -->
     <script src="./js/barrabusqueda.js"></script>
     <script src="./js/metatags.js"></script>
@@ -398,5 +738,6 @@
     <script src="./js/review.js"></script>
     <script src="./js/compartir.js"></script>
     <script src="./js/btnsubir.js"></script>
-</body>
+    <button id="btnSubir" title="Subir al inicio">↑ Subir</button>
+  </body>
 </html>
