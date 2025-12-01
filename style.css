@@ -867,3 +867,71 @@ footer a {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* DARK MODE STYLES */
+
+body.dark-mode,
+.dark-mode .page-container {
+  background-color: #181a1b !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #23272b !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .slogan,
+.dark-mode .card,
+.dark-mode .card-container,
+.dark-mode .conf-container,
+.dark-mode .sidebar,
+.dark-mode .form-container,
+.dark-mode .container-fluid,
+.dark-mode .accordion-item,
+.dark-mode .clipping-app {
+  background-color: #23272b !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .btn,
+.dark-mode .boton-submit,
+.dark-mode #btnSubir {
+  background-color: #444950 !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode a {
+  color: #f1c40f !important;
+}
+
+.dark-mode a:hover {
+  color: #ffe066 !important;
+}
+
+.dark-mode .header-search {
+  background: #23272b !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .header-search input {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .star {
+  color: #ffe066 !important;
+}
+
+.dark-mode .icon {
+  color: #ffe066 !important;
+}
+
+.dark-mode .social-links-contact a,
+.dark-mode .social-links a {
+  color: #ffe066 !important;
+}
+
+.dark-mode #darkModeIcon.fas.fa-sun {
+  color: #ffe066 !important; /* Amarillo claro, visible en fondo oscuro */
+}

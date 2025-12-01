@@ -181,6 +181,19 @@
           <a href="./contacto.html" data-label="Contacto"
             ><i class="fas fa-envelope"></i
           ></a>
+          <button
+            id="darkModeToggle"
+            title="Cambiar modo oscuro/claro"
+            style="
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 1.3em;
+              margin-left: 10px;
+            "
+          >
+            <i id="darkModeIcon" class="fas fa-moon"></i>
+          </button>
         </nav>
 
         <!-- Barra de búsqueda compacta -->
@@ -739,5 +752,35 @@
     <script src="./js/compartir.js"></script>
     <script src="./js/btnsubir.js"></script>
     <button id="btnSubir" title="Subir al inicio">↑ Subir</button>
+
+    <script>
+      // Cambia el icono según el modo
+      function updateDarkModeIcon(isDark) {
+        const icon = document.getElementById("darkModeIcon");
+        if (icon) {
+          icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+        }
+      }
+
+      // Aplica el modo oscuro si está guardado
+      function applyDarkModeFromStorage() {
+        const isDark = localStorage.getItem("darkMode") === "true";
+        document.body.classList.toggle("dark-mode", isDark);
+        updateDarkModeIcon(isDark);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        applyDarkModeFromStorage();
+        const toggle = document.getElementById("darkModeToggle");
+        if (toggle) {
+          toggle.addEventListener("click", function () {
+            const isDark = !document.body.classList.contains("dark-mode");
+            document.body.classList.toggle("dark-mode", isDark);
+            localStorage.setItem("darkMode", isDark);
+            updateDarkModeIcon(isDark);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
