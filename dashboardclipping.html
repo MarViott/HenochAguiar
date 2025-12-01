@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Clipping</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <a href="./index.html"
+          ><img src="./media/el futuro no espera - logo.jpg" alt="logo"
+        /></a>
+        <nav>
+          <a href="./publicaciones.html"><i class="fas fa-book"></i></a>
+          <a href="./conferencias.html"><i class="fas fa-microphone"></i></a>
+          <a href="./clipping.html"><i class="fas fa-newspaper"></i></a>
+          <a href="./contacto.html"><i class="fas fa-envelope"></i></a>
+        </nav>
+      </header>
+      <main>
+        <h2>Agregar Noticia al Clipping</h2>
+        <form id="formClipping">
+          <label for="anio">Año:</label>
+          <input
+            type="number"
+            id="anio"
+            name="anio"
+            min="2000"
+            max="2100"
+            required
+          /><br />
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required /><br />
+          <label for="copete">Copete:</label>
+          <input type="text" id="copete" name="copete" required /><br />
+          <label for="link">Enlace:</label>
+          <input type="url" id="link" name="link" required /><br />
+          <label for="imagen">Imagen (opcional):</label>
+          <input
+            type="url"
+            id="imagen"
+            name="imagen"
+            placeholder="URL de la imagen"
+          /><br />
+          <label for="audio">Audio (opcional):</label>
+          <input
+            type="url"
+            id="audio"
+            name="audio"
+            placeholder="URL de audio"
+          /><br />
+          <label for="iframe">Iframe (opcional):</label>
+          <input
+            type="url"
+            id="iframe"
+            name="iframe"
+            placeholder="URL de iframe"
+          /><br />
+          <button type="submit">Agregar al Clipping</button>
+        </form>
+      </main>
+      <footer>
+        <p>&copy; 2024 Henoch Aguiar. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+    <script>
+      document
+        .getElementById("formClipping")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const noticia = {
+            anio: document.getElementById("anio").value,
+            titulo: document.getElementById("titulo").value,
+            copete: document.getElementById("copete").value,
+            link: document.getElementById("link").value,
+            imagen: document.getElementById("imagen").value,
+            audio: document.getElementById("audio").value,
+            iframe: document.getElementById("iframe").value,
+          };
+          let noticias =
+            JSON.parse(localStorage.getItem("clippingNoticias")) || [];
+          noticias.unshift(noticia);
+          localStorage.setItem("clippingNoticias", JSON.stringify(noticias));
+          this.reset();
+          alert("Noticia agregada correctamente al clipping");
+        });
+    </script>
+  </body>
+</html>

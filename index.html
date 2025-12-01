@@ -781,6 +781,57 @@
           });
         }
       });
+
+      function mostrarNoticias() {
+        const contenedor = document.getElementById("noticias-dinamicas");
+        if (!contenedor) return;
+        const noticias = JSON.parse(localStorage.getItem("noticias")) || [];
+        contenedor.innerHTML = "";
+        noticias.forEach((noticia, idx) => {
+          contenedor.innerHTML += `
+      <div class="card">
+        ${
+          noticia.imagen
+            ? `<img src="${noticia.imagen}" alt="Imagen de la noticia" />`
+            : ""
+        }
+        <h3>${noticia.titulo}</h3>
+        <p class="card-text">${noticia.copete || ""}</p>
+        ${
+          noticia.audio
+            ? `<audio controls style="height:50px;width:99%" src="${noticia.audio}"></audio><br/>`
+            : ""
+        }
+        ${
+          noticia.iframe
+            ? `<iframe width="99%" height="252" src="${noticia.iframe}" frameborder="0" allowfullscreen></iframe><br/>`
+            : ""
+        }
+        <button class="btn">
+          <a href="${noticia.link}" target="_blank" rel="noopener noreferrer">${
+            noticia.boton || "Leer más"
+          }</a>
+        </button>
+        <div class="usuario-container">
+          <div class="rating-section" data-card-id="dinamica-${idx}">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <div class="action">
+            <span class="icon share-icon">🔗</span>
+          </div>
+        </div>
+        <p><em>${noticia.fecha ? noticia.fecha + " - " : ""}${
+            noticia.categoria || ""
+          }</em></p>
+      </div>
+    `;
+        });
+      }
+      document.addEventListener("DOMContentLoaded", mostrarNoticias);
     </script>
   </body>
 </html>

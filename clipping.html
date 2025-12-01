@@ -279,7 +279,6 @@
                                 <a href="https://www.iprofesional.com/tecnologia/171894-henoch-aguiar-solo-el-35-de-las-antenas-del-pais-tiene-3g" target="_blank" rel="noopener noreferrer">Leer más >>></a> 
                                 <div class="col"><strong>Por qué se siguen cortando las comunicaciones móviles por celular</strong>«Argentina es el primer país del mundo en transformar la telefonía móvil en fija; si te mueves, suenas (…) La gente que escucha te dice que te quedes quieto”. Son palabras del 2013 de Henoch Aguiar, experto en comunicaciones y exjefe de esa cartera de gobierno.<em>LA NACION, 22 de julio de 2013.</em> 
                                   <a href="https://www.iprofesional.com/tecnologia/171894-henoch-aguiar-solo-el-35-de-las-antenas-del-pais-tiene-3g" target="_blank" rel="noopener noreferrer">Leer más >>></a>
-          
                               </div>  
                               </div>
                             </div>
@@ -414,3 +413,36 @@
                
           </body>
           </html>
+<script>
+function renderClippingNoticias() {
+  const noticias = JSON.parse(localStorage.getItem('clippingNoticias')) || [];
+  if (!noticias.length) return;
+  const accordion = document.getElementById('accordionClipping');
+  if (!accordion) return;
+
+  noticias.forEach((noticia, idx) => {
+    const id = `dinamicCollapse${idx}`;
+    const parentId = `dinamicHeading${idx}`;
+    const card = document.createElement('div');
+    card.className = 'accordion-item';
+    card.innerHTML = `
+      <h2 class="accordion-header" id="${parentId}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="false" aria-controls="${id}">
+          ${noticia.anio} - ${noticia.titulo}
+        </button>
+      </h2>
+      <div id="${id}" class="accordion-collapse collapse" aria-labelledby="${parentId}" data-bs-parent="#accordionClipping">
+        <div class="accordion-body">
+          ${noticia.imagen ? `<img src="${noticia.imagen}" alt="Imagen" style="max-width:100%;height:auto;"><br>` : ""}
+          <strong>${noticia.copete}</strong><br>
+          ${noticia.audio ? `<audio controls src="${noticia.audio}" style="width:100%;"></audio><br>` : ""}
+          ${noticia.iframe ? `<iframe src="${noticia.iframe}" width="100%" height="200" frameborder="0" allowfullscreen></iframe><br>` : ""}
+          <a href="${noticia.link}" target="_blank" rel="noopener noreferrer">Ver más</a>
+        </div>
+      </div>
+    `;
+    accordion.prepend(card);
+  });
+}
+document.addEventListener('DOMContentLoaded', renderClippingNoticias);
+</script>

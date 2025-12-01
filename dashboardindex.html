@@ -81,6 +81,30 @@
     <script src="./js/compartir.js" defer></script>
     <script src="./js/btnsubir.js" defer></script>
 
+    <script>
+document.getElementById('formularioNoticias').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Obtén los valores del formulario
+    const noticia = {
+        titulo: document.getElementById('titulo').value,
+        copete: document.getElementById('copete').value,
+        fecha: document.getElementById('fecha').value,
+        link: document.getElementById('link').value,
+        categoria: document.getElementById('category').value
+    };
+    // Obtén las noticias existentes o crea un array vacío
+    let noticias = JSON.parse(localStorage.getItem('noticias')) || [];
+    // Agrega la nueva noticia
+    noticias.unshift(noticia); // unshift para que la más nueva quede arriba
+    // Guarda en localStorage
+    localStorage.setItem('noticias', JSON.stringify(noticias));
+    // Limpia el formulario
+    this.reset();
+    // Opcional: muestra un mensaje
+    alert('Noticia agregada correctamente');
+});
+</script>
+
     </div>
 </body>
 </html>
