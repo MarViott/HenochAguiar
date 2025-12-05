@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://henochaguiar.com/sitemap.xml
+
+# Crawl-delay (opcional, para no saturar el servidor)
+
+Crawl-delay: 1
+
+# Desindexar el dashboard (no debe aparecer en Google)
+
+Disallow: /dashboardindex.html
+Disallow: /dashboardclipping.html
