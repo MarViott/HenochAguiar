@@ -714,10 +714,25 @@
             ></a>
             <a
               href="https://twitter.com/henochaguiar"
+              title="Twitter"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-x-twitter" title="Twitter"></i
             ></a>
+          </div>
+
+          <!-- Widget de Twitter -->
+          <div class="twitter-widget">
+            <h3>Últimos Tweets</h3>
+            <a
+              class="twitter-timeline"
+              data-height="400"
+              data-theme="light"
+              data-chrome="noheader nofooter noborders"
+              href="https://twitter.com/henochaguiar?ref_src=twsrc%5Etfw"
+            >
+              Tweets de @henochaguiar
+            </a>
           </div>
         </div>
       </main>
@@ -833,5 +848,12 @@
       }
       document.addEventListener("DOMContentLoaded", mostrarNoticias);
     </script>
+
+    <!-- Script de Twitter Widgets -->
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
   </body>
 </html>

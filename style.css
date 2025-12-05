@@ -624,6 +624,36 @@ footer a {
     cursor: pointer;
 }
 
+/* Widget de Twitter */
+.twitter-widget {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.twitter-widget h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #1da1f2;
+  font-size: 1.2em;
+}
+
+/* Modo oscuro */
+.dark-mode .twitter-widget {
+  background-color: #23272b;
+}
+
+.dark-mode .twitter-widget h3 {
+  color: #1da1f2;
+}
+
+@media (max-width: 600px) {
+  .twitter-widget {
+    margin-top: 15px;
+  }
+}
+
 /* MEDIA QUERIES */
 
 /* Móviles (0px - 576px) */
