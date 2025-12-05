@@ -3,3 +3,8 @@
   to = "https://:splat"
   status = 301
   force = true
+
+# Configuración adicional opcional
+[build]
+  publish = "."
+  command = "echo 'No build command needed'"
