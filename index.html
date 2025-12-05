@@ -743,15 +743,18 @@
           <!-- Widget de Twitter -->
           <div class="twitter-widget">
             <h3>Últimos Tweets</h3>
-            <a
-              class="twitter-timeline"
-              data-height="400"
-              data-theme="light"
-              data-chrome="noheader nofooter noborders"
-              href="https://twitter.com/henochaguiar?ref_src=twsrc%5Etfw"
-            >
-              Tweets de @henochaguiar
-            </a>
+            <blockquote class="twitter-tweet" data-theme="light">
+              <p lang="es" dir="ltr">
+                <a href="https://twitter.com/henochaguiar?ref_src=twsrc%5Etfw">
+                  Tweets de @henochaguiar
+                </a>
+              </p>
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
           </div>
         </div>
       </main>
@@ -874,6 +877,14 @@
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
     ></script>
+    <script>
+      // Forzar carga del widget de Twitter
+      window.addEventListener("load", function () {
+        if (window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load();
+        }
+      });
+    </script>
   </body>
 </html>
 
