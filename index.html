@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -78,7 +78,10 @@
       body {
         background-color: whitesmoke;
         color: black;
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
         font-size: 16px;
         line-height: 1.5;
       }
@@ -121,7 +124,10 @@
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link
@@ -134,7 +140,10 @@
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link
@@ -203,6 +212,8 @@
           <button
             id="darkModeToggle"
             title="Cambiar modo oscuro/claro"
+            data-tooltip="Cambiar entre modo claro y oscuro"
+            data-tooltip-position="bottom"
             style="
               background: none;
               border: none;
@@ -220,14 +231,18 @@
           <input
             type="search"
             id="header-search-input"
-            placeholder="Buscar..."
+            placeholder="Buscar artículos..."
             aria-label="Buscar en el sitio"
+            data-tooltip="Busca artículos en tiempo real"
+            data-tooltip-position="bottom"
           />
           <button
             type="button"
             id="header-search-btn"
             aria-label="Buscar"
             title="Buscar"
+            data-tooltip="Buscar"
+            data-tooltip-position="bottom"
           >
             <i class="fas fa-search"></i>
           </button>
@@ -279,6 +294,10 @@
                 <span class="icon share-icon">🔗</span>
               </div>
             </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
+            </div>
           </div>
 
           <div class="card">
@@ -325,6 +344,10 @@
                 <span class="icon share-icon">🔗</span>
               </div>
             </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
+            </div>
           </div>
 
           <div class="card">
@@ -365,6 +388,10 @@
                 <span class="icon share-icon">🔗</span>
               </div>
             </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
+            </div>
           </div>
           <div class="card">
             <img
@@ -384,7 +411,7 @@
 
             <button class="btn">
               <a
-                href="https://www.telesemana.com/blog/2025/03/25/tras-la-decision-del-gobierno-argentino-de-suspender-la-compra-de-telefonica-telecom-aclaro-que-ambas-companias-continuan-operando-de-manera-independiente/"
+                href="https://www.telesemana.com/blog/2025/03/25/tras-la-decision-del-gobierno-argentino-de-suspender-la-compra-de-telefonica-telecom-aclaro-que-ambas-companías-continúan-operando-de-manera-independiente/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Leer más</a
@@ -401,6 +428,10 @@
               <div class="action">
                 <span class="icon share-icon">🔗</span>
               </div>
+            </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
             </div>
           </div>
           <div class="card">
@@ -441,6 +472,10 @@
               <div class="action">
                 <span class="icon share-icon">🔗</span>
               </div>
+            </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
             </div>
           </div>
           <div class="card">
@@ -483,6 +518,10 @@
                 <span class="icon share-icon">🔗</span>
               </div>
             </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
+            </div>
           </div>
           <div class="card">
             <iframe
@@ -491,7 +530,15 @@
               src="https://www.youtube.com/embed/ikMvb-pLzO8?si=VKzllqUc6orMkXaA"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
@@ -522,6 +569,10 @@
               <div class="action">
                 <span class="icon share-icon">🔗</span>
               </div>
+            </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
             </div>
           </div>
           <div class="card">
@@ -563,6 +614,10 @@
               <div class="action">
                 <span class="icon share-icon">🔗</span>
               </div>
+            </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
             </div>
           </div>
           <div class="card">
@@ -608,6 +663,10 @@
                 <span class="icon share-icon">🔗</span>
               </div>
             </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
+            </div>
           </div>
           <div class="card">
             <img src="./media/uba.jpg" alt="photo" />
@@ -638,6 +697,10 @@
               <div class="action">
                 <span class="icon share-icon">🔗</span>
               </div>
+            </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
             </div>
           </div>
           <div class="card">
@@ -674,6 +737,10 @@
               <div class="action">
                 <span class="icon share-icon">🔗</span>
               </div>
+            </div>
+            <div class="stats">
+              <span>👁️ 1.2k visitas</span>
+              <span>⭐ 4.5/5</span>
             </div>
           </div>
         </div>
@@ -742,22 +809,47 @@
 
           <!-- Widget de Twitter/X -->
           <div class="twitter-widget">
-            <h3>Últimos Tweets</h3>
+            <h3>Sígueme en X</h3>
             <div
-              id="twitter-embed-container"
-              style="max-width: 100%; overflow: hidden"
+              class="twitter-content"
+              style="text-align: center; padding: 20px"
             >
-              <!-- Método 1: Timeline widget -->
               <a
-                class="twitter-timeline"
+                href="https://twitter.com/henochaguiar"
+                class="twitter-follow-button"
+                data-size="large"
                 data-lang="es"
-                data-width="100%"
-                data-height="600"
-                data-theme="light"
-                href="https://twitter.com/henochaguiar?ref_src=twsrc%5Etfw"
+                data-show-count="true"
+                data-show-screen-name="true"
               >
-                Tweets de @henochaguiar
+                Seguir @henochaguiar
               </a>
+              <p style="margin-top: 20px">
+                <a
+                  href="https://twitter.com/henochaguiar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="
+                    color: #1da1f2;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 16px;
+                  "
+                >
+                  <i class="fab fa-x-twitter"></i> Ver últimos posts en X →
+                </a>
+              </p>
+              <!-- Timeline embed alternativo -->
+              <div id="twitter-timeline-fallback" style="margin-top: 20px">
+                <a
+                  class="twitter-timeline"
+                  data-lang="es"
+                  data-height="500"
+                  data-theme="light"
+                  href="https://twitter.com/henochaguiar?ref_src=twsrc%5Etfw"
+                >
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -775,6 +867,35 @@
           >
         </p>
       </footer>
+    </div>
+
+    <!-- Modal de Vista Previa -->
+    <div id="previewModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">Título del artículo</h2>
+          <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div id="modalImage" class="modal-image-container"></div>
+          <div id="modalDescription" class="modal-description">
+            <p>Descripción del contenido...</p>
+          </div>
+          <div id="modalMeta" class="modal-meta">
+            <span class="modal-date">📅 Fecha</span>
+            <span class="modal-source">📰 Fuente</span>
+          </div>
+          <div id="modalMedia" class="modal-media"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal btn-read-full" id="modalReadMore">
+            Leer artículo completo
+          </button>
+          <button class="btn-modal btn-share" id="modalShare">
+            🔗 Compartir
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- jQuery PRIMERO (requerido por Toastr) -->
@@ -865,8 +986,8 @@
           </div>
         </div>
         <p><em>${noticia.fecha ? noticia.fecha + " - " : ""}${
-            noticia.categoria || ""
-          }</em></p>
+          noticia.categoria || ""
+        }</em></p>
       </div>
     `;
         });
@@ -880,5 +1001,44 @@
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
     ></script>
+
+    <!-- Inicialización del widget de Twitter -->
+    <script>
+      // Esperar a que se cargue el script de Twitter
+      window.twttr = (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function (f) {
+          t._e.push(f);
+        };
+
+        return t;
+      })(document, "script", "twitter-wjs");
+
+      // Inicializar widgets cuando esté listo
+      window.twttr.ready(function (twttr) {
+        twttr.widgets.load();
+      });
+    </script>
+
+    <!-- Modal de Vista Previa -->
+    <script src="./js/modal.js"></script>
+
+    <!-- Tooltips Informativos -->
+    <script src="./js/tooltips.js"></script>
+
+    <!-- Búsqueda en Tiempo Real -->
+    <script src="./js/busquedaTiempoReal.js"></script>
+
+    <!-- Skeleton Loaders -->
+    <script src="./js/skeletonLoader.js"></script>
   </body>
 </html>
