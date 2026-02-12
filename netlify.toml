@@ -14,9 +14,6 @@
   publish = "."
   command = "echo 'No build command needed'"
 
-[[plugins]]
-  package = "netlify-plugin-is-website-vulnerable"
-
 [[headers]]
   for = "/*"
   [headers.values]
