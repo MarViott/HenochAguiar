@@ -1129,6 +1129,25 @@ body.dark-mode,
   color: #ffe066 !important; /* Amarillo claro, visible en fondo oscuro */
 }
 
+/* Estilos del nav modernizado en modo oscuro */
+.dark-mode nav a {
+  color: #f1c40f !important;
+}
+
+.dark-mode nav a:hover {
+  background: rgba(241, 196, 15, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(241, 196, 15, 0.15) !important;
+}
+
+.dark-mode nav button {
+  color: #f1c40f !important;
+}
+
+.dark-mode nav button:hover {
+  background: rgba(241, 196, 15, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(241, 196, 15, 0.15) !important;
+}
+
 /* Efecto de aparición progresiva */
 @keyframes fadeInUp {
   from {
