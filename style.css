@@ -43,9 +43,9 @@ a:visited {
 
 .page-container{
     display: grid;  
-    grid-template-rows: 60px 100px 1fr 50px;
+    grid-template-rows: 60px auto 1fr 50px;
     min-height: 100vh;
-    gap: 10px;
+    gap: 0;
     padding: 0;  /* Eliminar padding del contenedor */
 }
 
@@ -57,7 +57,7 @@ h1, h3, h4 {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(232, 176, 92);
+    background: linear-gradient(135deg, rgb(240, 190, 110) 0%, rgb(232, 176, 92) 50%, rgb(220, 160, 75) 100%);
     align-items: center;
     padding: 5px 20px;
     gap: 10px;    
@@ -65,18 +65,20 @@ header {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
       
 header img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    transition: transform 1s;
+    transition: filter 0.5s ease, box-shadow 0.5s ease;
     object-fit: cover;
 }
 
 header img:hover {
-    transform: scale(1.5);
+    filter: brightness(1.3) contrast(1.1);
+    box-shadow: 0 0 20px rgba(232, 176, 92, 0.8), 0 0 30px rgba(232, 176, 92, 0.5);
 }
 
 /* Barra de búsqueda en el header */
@@ -141,22 +143,89 @@ nav {
     align-items: center;
     font-size: 24px;
     padding: 0;
-    gap: 15px;
+    gap: 25px;
+}
+
+nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     color: rgb(8, 34, 75);
-    transition: 1s;
+    background-color: rgba(8, 34, 75, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(8, 34, 75, 0.2);
+}
+
+nav a i {
+    transition: transform 0.3s ease;
+}
+
+nav a:hover i {
+    transform: scale(1.1);
+}
+
+/* Botón de modo oscuro en el nav */
+nav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: rgba(8, 34, 75, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(8, 34, 75, 0.2);
+}
+
+nav button i {
+    transition: transform 0.3s ease;
+}
+
+nav button:hover i {
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Leyenda de los íconos del nav */
+.menu-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: opacity 0.5s ease;
+    color: rgb(8, 34, 75);
+    text-align: center;
+    pointer-events: none;
+}
+
+nav a {
+    position: relative;
 }
 
 .slogan {    
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aliceblue;
-    margin: 0 20px;  /* Solo margen lateral para el slogan */
-    padding: 10px;
+    background: linear-gradient(135deg, rgb(235, 185, 100) 0%, rgb(232, 176, 92) 50%, rgb(228, 168, 85) 100%);
+    margin: 0;
+    padding: 15px 20px 20px 20px;
     gap: 0;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos armónicos para h1 y h3 dentro del slogan */
@@ -195,7 +264,7 @@ main{
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: aliceblue;
-    margin: 0 20px;  /* Margen lateral para el contenido principal */
+    margin: 10px 20px 0 20px;
     padding: 10px;
 }
 
@@ -299,6 +368,7 @@ main{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 10px;
+    margin: 10px 20px 0 20px;
     border-radius: 15px;
     background-color: aliceblue;
 }
@@ -376,6 +446,10 @@ main{
     color: whitesmoke;
 }
 
+.container-fluid {
+    margin: 10px 20px 0 20px;
+}
+
 .container-fluid a {
     color: rgb(222, 153, 51);
     font-weight: bold;
@@ -392,7 +466,7 @@ main{
     justify-content: center;
     align-items: center;    
     background-image: url("./media/telecomunicaciones\,\ .png");  
-    margin: 10px;
+    margin: 10px 10px 10px 10px;
     border-radius: 15px;
     padding: 10px;
     text-align: center;
@@ -588,7 +662,7 @@ textarea {
 }
 
 footer {
-    background-color: rgb(232, 176, 92);
+    background: linear-gradient(135deg, rgb(240, 190, 110) 0%, rgb(232, 176, 92) 50%, rgb(220, 160, 75) 100%);
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
@@ -729,12 +803,12 @@ footer a {
     }
     
     .slogan {
-        margin: 0 10px;
+        margin: 0;
     }
     
     main {
         grid-template-columns: 1fr;
-        margin: 0 10px;
+        margin: 10px 10px 0 10px;
     } 
     
     .card-container {
@@ -833,13 +907,13 @@ footer a {
     }
     
     .slogan {
-        margin: 0 15px;
+        margin: 0;
     }
     
     main {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        margin: 0 15px;
+        margin: 10px 15px 0 15px;
     } 
     
     .card-container {
@@ -899,13 +973,13 @@ footer a {
     }
     
     .slogan {
-        margin: 0 20px;
+        margin: 0;
     }
     
     main {
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
-        margin: 0 20px;
+        margin: 10px 20px 0 20px;
     } 
     
     .card-container {
@@ -941,11 +1015,11 @@ footer a {
     }
     
     .slogan {
-        margin: 0 20px;
+        margin: 0;
     }
     
     main {
-        margin: 0 20px;
+        margin: 10px 20px 0 20px;
     }
     
     .card-container {
@@ -979,8 +1053,17 @@ body.dark-mode,
 
 .dark-mode header,
 .dark-mode footer {
-  background-color: #23272b !important;
+  background: linear-gradient(135deg, #2a2e32 0%, #23272b 50%, #1d2125 100%) !important;
   color: #f1f1f1 !important;
+}
+
+.dark-mode header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark-mode .slogan {
+  background: linear-gradient(135deg, #272b2f 0%, #23272b 50%, #1f2327 100%) !important;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .dark-mode .slogan,
@@ -1455,6 +1538,7 @@ body.dark-mode,
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   animation: fadeIn 0.3s ease;
 }
@@ -1639,7 +1723,7 @@ body.dark-mode,
 
 /* Botón de Vista Previa en las cards */
 .btn-preview {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #93949b 0%, #58555a 100%);
   color: white;
   padding: 8px 16px;
   border: none;
