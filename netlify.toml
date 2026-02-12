@@ -16,8 +16,6 @@
 
 [[plugins]]
   package = "netlify-plugin-is-website-vulnerable"
-  [plugins.inputs]
-    enabled = false
 
 [[headers]]
   for = "/*"
