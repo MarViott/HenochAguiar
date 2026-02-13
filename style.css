@@ -57,7 +57,7 @@ h1, h3, h4 {
 header {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(135deg, rgb(240, 190, 110) 0%, rgb(232, 176, 92) 50%, rgb(220, 160, 75) 100%);
+    background: linear-gradient(135deg, rgb(240, 190, 110) 0%, rgb(232, 176, 92) 50%, rgb(238, 150, 28) 100%);
     align-items: center;
     padding: 5px 20px;
     gap: 10px;    
