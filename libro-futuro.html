@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Futuro No Espera - Henoch Aguiar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./media/el futuro no espera - logo.ico"
+      type="image/x-icon"
+    />
+    <script src="./js/navbar.js"></script>
+    <style>
+      .libro-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .libro-header {
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .libro-imagen {
+        flex: 0 0 300px;
+      }
+
+      .libro-imagen img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .libro-info {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .libro-info h1 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      .libro-info .autor {
+        font-size: 1.3rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+
+      .libro-botones {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .libro-botones .btn {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .sinopsis-completa {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: var(--bg-light);
+        border-radius: 8px;
+        line-height: 1.8;
+      }
+
+      .sinopsis-completa h2 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+      }
+
+      .sinopsis-completa p {
+        font-size: 1.1rem;
+        text-align: justify;
+        margin-bottom: 1rem;
+      }
+
+      /* Sección de comentarios */
+      .comentarios-section {
+        margin-top: 4rem;
+        padding: 2rem;
+        background: var(--bg-light);
+        border-radius: 8px;
+      }
+
+      .comentarios-section h2 {
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      .comentario-form {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 3rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--text-color);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+        background: var(--input-bg);
+        color: var(--text-color);
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+      }
+
+      .rating-input {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 2rem;
+        direction: rtl;
+      }
+
+      .rating-input input {
+        display: none;
+      }
+
+      .rating-input label {
+        cursor: pointer;
+        color: #ddd;
+        transition: color 0.2s;
+      }
+
+      .rating-input input:checked ~ label,
+      .rating-input label:hover,
+      .rating-input label:hover ~ label {
+        color: #ffd700;
+      }
+
+      .comentarios-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .comentario {
+        background: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .comentario-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .comentario-autor {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      .comentario-fecha {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .comentario-estrellas {
+        color: #ffd700;
+        margin-bottom: 0.5rem;
+      }
+
+      .comentario-texto {
+        line-height: 1.6;
+        color: var(--text-color);
+      }
+
+      @media (max-width: 768px) {
+        .libro-header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .libro-imagen {
+          flex: 0 0 100%;
+          max-width: 300px;
+        }
+
+        .libro-info h1 {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        .libro-botones {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <a href="./index.html" title="Inicio - Henoch Aguiar">
+          <img
+            src="./media/el futuro no espera - logo.jpg"
+            alt="logo Henoch Aguiar"
+            class="logo"
+        /></a>
+        <nav id="menu">
+          <a href="./index.html" data-label="Inicio" title="Inicio"
+            ><i class="fas fa-home"></i
+          ></a>
+          <a
+            href="./publicaciones.html"
+            data-label="Publicaciones"
+            title="Publicaciones"
+            ><i class="fas fa-book"></i
+          ></a>
+          <a
+            href="./conferencias.html"
+            data-label="Conferencias"
+            title="Conferencias"
+            ><i class="fas fa-microphone"></i
+          ></a>
+          <a href="./clipping.html" data-label="Clipping" title="Clipping"
+            ><i class="fas fa-newspaper"></i
+          ></a>
+          <a href="./contacto.html" data-label="Contacto" title="Contacto"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <button
+            id="darkModeToggle"
+            title="Cambiar modo oscuro/claro"
+            style="
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 1.3em;
+              margin-left: 10px;
+            "
+          >
+            <i id="darkModeIcon" class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </header>
+
+      <div class="slogan">
+        <h1>Henoch Aguiar</h1>
+        <h3>El Futuro No Espera</h3>
+      </div>
+
+      <main>
+        <div class="libro-container">
+          <div class="libro-header">
+            <div class="libro-imagen">
+              <img
+                src="./media/el futuro no espera.jpg"
+                alt="Libro El Futuro No Espera - Henoch Aguiar"
+              />
+            </div>
+            <div class="libro-info">
+              <h1>EL FUTURO NO ESPERA</h1>
+              <p class="autor">Por Henoch Aguiar</p>
+              <p>
+                Un análisis profundo sobre la Era Digital y la Sociedad del
+                Conocimiento. Una guía esencial para comprender los desafíos y
+                oportunidades del siglo XXI.
+              </p>
+              <div class="libro-botones">
+                <a
+                  href="./publicaciones.html"
+                  class="btn btn-secondary"
+                  title="Volver a Publicaciones"
+                >
+                  <i class="fas fa-arrow-left"></i> Volver
+                </a>
+                <a
+                  href="https://cuspide.com/producto/el-futuro-no-espera/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary"
+                  title="Comprar en Cúspide"
+                >
+                  <i class="fas fa-shopping-cart"></i> Comprar en Cúspide
+                </a>
+                <a href="#sinopsis" class="btn btn-secondary">
+                  <i class="fas fa-book-open"></i> Leer Sinopsis
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="sinopsis" class="sinopsis-completa">
+            <h2>Sinopsis</h2>
+            <p>
+              El mundo pasó por dos grandes etapas de desarrollo económico: la
+              era agrícola y la era industrial. Vivimos ya en la era digital, la
+              Era de la Sociedad del Conocimiento. La nueva Era nos ofrece una
+              oportunidad única de crecer, con una estrategia basada no en la
+              riqueza de la tierra, sino en la capacidad de nuestra gente, en la
+              educación, en la creatividad, en fortalezas intelectuales que aún
+              se mantienen vigentes y que son distintivas de nuestro ser.
+            </p>
+            <p>
+              Para ello hace falta implementar una política activa, que impulse
+              seis grandes acciones: educar para el nuevo milenio, utilizar la
+              informática y las comunicaciones para disminuir la exclusión
+              social y económica, impulsar la informática y la tecnología como
+              sectores prioritarios de la economía, modernizar la legislación,
+              dar transparencia a la política con el gobierno electrónico y
+              desarrollar intensivamente las comunicaciones.
+            </p>
+            <p>
+              Si una ciudad, una provincia o el país, implementa desde ahora una
+              Política Digital adecuada, preparando a su comunidad para pelear
+              por un lugar en el siglo XXI, está a tiempo de lograrlo. Sólo
+              falta el compromiso de hacerlo.
+            </p>
+          </div>
+
+          <div class="comentarios-section">
+            <h2>Reseñas y Comentarios</h2>
+
+            <div class="comentario-form">
+              <h3>Deja tu reseña</h3>
+              <form id="formComentario">
+                <div class="form-group">
+                  <label for="nombre">Nombre *</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    placeholder="Tu nombre"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Calificación *</label>
+                  <div class="rating-input">
+                    <input
+                      type="radio"
+                      name="rating"
+                      id="star5"
+                      value="5"
+                      required
+                    />
+                    <label for="star5">★</label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4">★</label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3">★</label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2">★</label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1">★</label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="comentario">Comentario *</label>
+                  <textarea
+                    id="comentario"
+                    name="comentario"
+                    required
+                    placeholder="Comparte tu opinión sobre el libro..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Enviar Reseña
+                </button>
+              </form>
+            </div>
+
+            <div class="comentarios-lista" id="listaComentarios">
+              <!-- Comentarios de ejemplo -->
+              <div class="comentario">
+                <div class="comentario-header">
+                  <span class="comentario-autor">María González</span>
+                  <span class="comentario-fecha">15 de enero, 2026</span>
+                </div>
+                <div class="comentario-estrellas">★★★★★</div>
+                <p class="comentario-texto">
+                  Excelente libro que nos hace reflexionar sobre el futuro
+                  digital. Las propuestas de Aguiar son claras y aplicables. Una
+                  lectura esencial para entender hacia dónde vamos como
+                  sociedad.
+                </p>
+              </div>
+
+              <div class="comentario">
+                <div class="comentario-header">
+                  <span class="comentario-autor">Carlos Rodríguez</span>
+                  <span class="comentario-fecha">8 de enero, 2026</span>
+                </div>
+                <div class="comentario-estrellas">★★★★☆</div>
+                <p class="comentario-texto">
+                  Muy interesante el análisis sobre la era digital. Me gustó
+                  especialmente el enfoque en educación y tecnología como
+                  pilares del desarrollo. Recomendado para todos los interesados
+                  en el futuro de América Latina.
+                </p>
+              </div>
+
+              <div class="comentario">
+                <div class="comentario-header">
+                  <span class="comentario-autor">Ana Martínez</span>
+                  <span class="comentario-fecha">22 de diciembre, 2025</span>
+                </div>
+                <div class="comentario-estrellas">★★★★★</div>
+                <p class="comentario-texto">
+                  Un libro visionario que debería ser lectura obligatoria para
+                  políticos y educadores. Aguiar tiene una visión clara de los
+                  desafíos que enfrentamos y propone soluciones concretas. ¡Muy
+                  recomendado!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="btnSubir">↑ Subir</button>
+      </main>
+
+      <footer>
+        <p>&copy; 2024 Henoch Aguiar. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+    <script src="js/btnsubir.js"></script>
+
+    <script>
+      // Dark mode functionality
+      function updateDarkModeIcon(isDark) {
+        const icon = document.getElementById("darkModeIcon");
+        if (icon) {
+          icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+        }
+      }
+
+      function applyDarkModeFromStorage() {
+        const isDark = localStorage.getItem("darkMode") === "true";
+        document.body.classList.toggle("dark-mode", isDark);
+        updateDarkModeIcon(isDark);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        applyDarkModeFromStorage();
+        const toggle = document.getElementById("darkModeToggle");
+        if (toggle) {
+          toggle.addEventListener("click", function () {
+            const isDark = !document.body.classList.contains("dark-mode");
+            document.body.classList.toggle("dark-mode", isDark);
+            localStorage.setItem("darkMode", isDark);
+            updateDarkModeIcon(isDark);
+          });
+        }
+
+        // Formulario de comentarios
+        const form = document.getElementById("formComentario");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const rating = document.querySelector(
+              'input[name="rating"]:checked',
+            ).value;
+            const comentario = document.getElementById("comentario").value;
+
+            // Crear estrellas
+            let estrellas = "";
+            for (let i = 0; i < 5; i++) {
+              estrellas += i < rating ? "★" : "☆";
+            }
+
+            // Crear nuevo comentario
+            const nuevoComentario = document.createElement("div");
+            nuevoComentario.className = "comentario";
+            nuevoComentario.innerHTML = `
+              <div class="comentario-header">
+                <span class="comentario-autor">${nombre}</span>
+                <span class="comentario-fecha">${new Date().toLocaleDateString(
+                  "es-ES",
+                  {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  },
+                )}</span>
+              </div>
+              <div class="comentario-estrellas">${estrellas}</div>
+              <p class="comentario-texto">${comentario}</p>
+            `;
+
+            // Agregar al inicio de la lista
+            const lista = document.getElementById("listaComentarios");
+            lista.insertBefore(nuevoComentario, lista.firstChild);
+
+            // Limpiar formulario
+            form.reset();
+
+            // Mostrar mensaje de éxito
+            alert("¡Gracias por tu reseña! Tu comentario ha sido publicado.");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
